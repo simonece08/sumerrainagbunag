@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1500" viewBox="0 0 1300 1500">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0C869"/>
+      <stop offset="100%" stop-color="#8A5A1B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFDF6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFDF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1300" height="1500" fill="url(#g)"/>
+  <rect width="1300" height="1500" fill="url(#glow)"/>
+  <g opacity="0.5" font-family="Georgia, serif" fill="#4A3419">
+    <text x="50%" y="47%" text-anchor="middle" font-size="32" letter-spacing="2">PHOTO PLACEHOLDER</text>
+    <text x="50%" y="53%" text-anchor="middle" font-size="23" letter-spacing="4">FINAL-PHOTO</text>
+  </g>
+</svg>
