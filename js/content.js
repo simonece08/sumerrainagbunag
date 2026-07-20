@@ -19,8 +19,8 @@ const SITE_CONTENT = {
   // META — browser tab title
   // ----------------------------------------------------------
   meta: {
-    pageTitle: "Happy Birthday, My Love",
-    herName: "Her Name",
+    pageTitle: "Happy Birthday, My Love, Mahal, Baby",
+    herName: "Sumer Rain Agbunag",
   },
 
   // ----------------------------------------------------------
@@ -29,7 +29,7 @@ const SITE_CONTENT = {
   hero: {
     image: "assets/images/hero.svg",
     imageAlt: "A portrait photo of her",
-    eyebrow: "A story, for you",
+    eyebrow: "A story, for you my birthday girl",
     title: "Once upon a time,\nthere was a girl…",
     subtitle: "And then, somehow, our stories became one.",
     cta: "Begin Our Story",
@@ -41,7 +41,7 @@ const SITE_CONTENT = {
   beforeWeMet: {
     eyebrow: "Chapter One",
     heading: "Before We Met",
-    intro: "Long before I knew her name, she was already living a whole life — one full of small joys, quiet dreams, and moments that were entirely her own.",
+    intro: "Long before I knew your name, you were already living a whole life — one full of small joys, bumpy roads, quiet dreams, and moments that were entirely her own.",
     photos: [
       {
         image: "assets/images/before-we-met-01.svg",
@@ -93,11 +93,11 @@ const SITE_CONTENT = {
   // ----------------------------------------------------------
   dayWeMet: {
     eyebrow: "Chapter Two",
-    heading: "The Day We Met",
-    date: "Month Day, Year",
-    location: "Where it happened",
-    title: "And Then, Everything Changed",
-    caption: "I didn't know it yet, but that was the last ordinary day I'd ever have. Every day since has had you in it.",
+    heading: "The Day We Met, Our First Date",
+    date: "February 22, 2026",
+    location: "Gondola Coffee",
+    title: "And Then, Everything Changed and Started",
+    caption: "We didn't know it yet, but that was the last ordinary day I'd ever have. Every day since has had you in it.",
     image: "assets/images/meeting-day.svg",
     imageAlt: "A photo from the day we met",
   },
@@ -134,29 +134,29 @@ const SITE_CONTENT = {
         caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
         layout: "polaroid",
       },
-      {
+            {
         image: "assets/images/first-memory-04.svg",
         imageAlt: "An early memory together",
-        date: "",
-        title: "Us, Learning Each Other",
-        caption: "Every small thing I learned about you became a favorite thing.",
-        layout: "editorial",
-      },
-      {
-        image: "assets/images/first-memory-05.svg",
-        imageAlt: "An early memory together",
-        date: "",
-        title: "The First 'I Miss You'",
-        caption: "I hadn't even left yet and I already missed you.",
+        date: "A few weeks in",
+        title: "The Day I Knew",
+        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
         layout: "polaroid",
       },
-      {
+            {
+        image: "assets/images/first-memory-05.svg",
+        imageAlt: "An early memory together",
+        date: "A few weeks in",
+        title: "The Day I Knew",
+        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
+        layout: "polaroid",
+      },
+            {
         image: "assets/images/first-memory-06.svg",
         imageAlt: "An early memory together",
-        date: "",
-        title: "Meeting Each Other's World",
-        caption: "You started showing up in the parts of my life that mattered most.",
-        layout: "editorial",
+        date: "A few weeks in",
+        title: "The Day I Knew",
+        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
+        layout: "polaroid",
       },
     ],
   },
