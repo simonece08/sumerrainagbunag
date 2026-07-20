@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1D689"/>
+      <stop offset="100%" stop-color="#AD7726"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFDF6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFDF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#g)"/>
+  <rect width="900" height="1200" fill="url(#glow)"/>
+  <g opacity="0.5" font-family="Georgia, serif" fill="#4A3419">
+    <text x="50%" y="47%" text-anchor="middle" font-size="22" letter-spacing="2">PHOTO PLACEHOLDER</text>
+    <text x="50%" y="53%" text-anchor="middle" font-size="16" letter-spacing="4">JOURNEY-02</text>
+  </g>
+</svg>

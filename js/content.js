@@ -27,7 +27,7 @@ const SITE_CONTENT = {
   // 1. HERO
   // ----------------------------------------------------------
   hero: {
-    image: "assets/images/hero.svg",
+    image: "assets/images/hero.jpg",
     imageAlt: "A portrait photo of her",
     eyebrow: "A story, for you my birthday girl",
     title: "Once upon a time,\nthere was a girl…",
@@ -44,42 +44,42 @@ const SITE_CONTENT = {
     intro: "Long before I knew your name, you were already living a whole life — one full of small joys, bumpy roads, quiet dreams, and moments that were entirely her own.",
     photos: [
       {
-        image: "assets/images/before-we-met-01.svg",
+        image: "assets/images/before-we-met-01.jpg",
         imageAlt: "A photo from before we met",
         date: "Somewhere, back then",
         title: "A Girl, Becoming",
         caption: "Before I knew you, you were already becoming the person I would someday love.",
       },
       {
-        image: "assets/images/before-we-met-02.svg",
+        image: "assets/images/before-we-met-02.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "Her Own Adventures",
         caption: "You were out there collecting stories, long before you had any idea I'd want to hear every one of them.",
       },
       {
-        image: "assets/images/before-we-met-03.svg",
+        image: "assets/images/before-we-met-03.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "Little Moments",
         caption: "Ordinary days that, looking back, were quietly shaping the woman I'd fall for.",
       },
       {
-        image: "assets/images/before-we-met-04.svg",
+        image: "assets/images/before-we-met-04.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "Chasing What She Loved",
         caption: "You already knew how to chase joy on your own terms — that never changed.",
       },
       {
-        image: "assets/images/before-we-met-05.svg",
+        image: "assets/images/before-we-met-05.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "The People Who Shaped Her",
         caption: "The friends, family, and moments that raised the woman I'd eventually meet.",
       },
       {
-        image: "assets/images/before-we-met-06.svg",
+        image: "assets/images/before-we-met-06.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "Still Becoming",
@@ -98,7 +98,7 @@ const SITE_CONTENT = {
     location: "Gondola Coffee",
     title: "And Then, Everything Changed and Started",
     caption: "We didn't know it yet, but that was the last ordinary day I'd ever have. Every day since has had you in it.",
-    image: "assets/images/meeting-day.svg",
+    image: "assets/images/meeting-day.jpg",
     imageAlt: "A photo from the day we met",
   },
 
@@ -111,7 +111,7 @@ const SITE_CONTENT = {
     intro: "The early days — nervous laughter, long conversations, and the slow, wonderful realization that I never wanted them to end.",
     photos: [
       {
-        image: "assets/images/first-memory-01.svg",
+        image: "assets/images/first-memory-01.jpg",
         imageAlt: "An early memory together",
         date: "Early on",
         title: "First Real Conversation",
@@ -119,7 +119,7 @@ const SITE_CONTENT = {
         layout: "polaroid",
       },
       {
-        image: "assets/images/first-memory-02.svg",
+        image: "assets/images/first-memory-02.jpg",
         imageAlt: "An early memory together",
         date: "Soon after",
         title: "That First Date",
@@ -127,7 +127,7 @@ const SITE_CONTENT = {
         layout: "editorial",
       },
       {
-        image: "assets/images/first-memory-03.svg",
+        image: "assets/images/first-memory-03.jpg",
         imageAlt: "An early memory together",
         date: "A few weeks in",
         title: "The Day I Knew",
@@ -135,7 +135,7 @@ const SITE_CONTENT = {
         layout: "polaroid",
       },
             {
-        image: "assets/images/first-memory-04.svg",
+        image: "assets/images/first-memory-04.jpg",
         imageAlt: "An early memory together",
         date: "A few weeks in",
         title: "The Day I Knew",
@@ -143,7 +143,7 @@ const SITE_CONTENT = {
         layout: "polaroid",
       },
             {
-        image: "assets/images/first-memory-05.svg",
+        image: "assets/images/first-memory-05.jpg",
         imageAlt: "An early memory together",
         date: "A few weeks in",
         title: "The Day I Knew",
@@ -151,7 +151,7 @@ const SITE_CONTENT = {
         layout: "polaroid",
       },
             {
-        image: "assets/images/first-memory-06.svg",
+        image: "assets/images/first-memory-06.jpg",
         imageAlt: "An early memory together",
         date: "A few weeks in",
         title: "The Day I Knew",
@@ -170,21 +170,21 @@ const SITE_CONTENT = {
     intro: "From then to now — a timeline of the moments that built us.",
     milestones: [
       {
-        image: "assets/images/journey-01.svg",
+        image: "assets/images/journey-01.jpg",
         imageAlt: "A milestone in our journey",
         date: "Year",
         title: "Our First Trip",
         caption: "Somewhere new, together for the first time — and it already felt like home.",
       },
       {
-        image: "assets/images/journey-02.svg",
+        image: "assets/images/journey-02.jpg",
         imageAlt: "A milestone in our journey",
         date: "Year",
         title: "Meeting the People We Love",
         caption: "You met the people who matter most to me. They understood, instantly, why I love you.",
       },
       {
-        image: "assets/images/journey-03.svg",
+        image: "assets/images/journey-03.jpg",
         imageAlt: "A milestone in our journey",
         date: "Year",
         title: "Through the Hard Days",
@@ -202,55 +202,55 @@ const SITE_CONTENT = {
     intro: "Not every memory needs a big occasion. Some of my favorites are the smallest ones.",
     items: [
       {
-        image: "assets/images/little-thing-01.svg",
+        image: "assets/images/little-thing-01.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "The way you laugh at your own jokes before you finish telling them.",
       },
       {
-        image: "assets/images/little-thing-02.svg",
+        image: "assets/images/little-thing-02.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Lazy Sunday mornings that turned into whole afternoons.",
       },
       {
-        image: "assets/images/little-thing-03.svg",
+        image: "assets/images/little-thing-03.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "That random text that made my entire day better.",
       },
       {
-        image: "assets/images/little-thing-04.svg",
+        image: "assets/images/little-thing-04.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Every playlist you've ever made me listen to 'just this one song.'",
       },
       {
-        image: "assets/images/little-thing-05.svg",
+        image: "assets/images/little-thing-05.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "The face you make when you're concentrating on something silly.",
       },
       {
-        image: "assets/images/little-thing-06.svg",
+        image: "assets/images/little-thing-06.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Falling asleep mid-conversation because neither of us wanted the day to end.",
       },
       {
-        image: "assets/images/little-thing-07.svg",
+        image: "assets/images/little-thing-07.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "The way you always steal the last bite off my plate.",
       },
       {
-        image: "assets/images/little-thing-08.svg",
+        image: "assets/images/little-thing-08.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Inside jokes that still make us laugh, every single time.",
       },
       {
-        image: "assets/images/little-thing-09.svg",
+        image: "assets/images/little-thing-09.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "You, half-asleep, still reaching for my hand.",
@@ -262,7 +262,7 @@ const SITE_CONTENT = {
   // 7. FINAL BIRTHDAY MESSAGE
   // ----------------------------------------------------------
   finalMessage: {
-    image: "assets/images/final-photo.svg",
+    image: "assets/images/final-photo.jpg",
     imageAlt: "A meaningful photo of us",
     eyebrow: "To be continued…",
     heading: "Happy Birthday, My Love",
