@@ -190,27 +190,6 @@ const SITE_CONTENT = {
         title: "Through the Hard Days",
         caption: "We learned that we're better at facing life together than apart.",
       },
-      {
-        image: "assets/images/journey-04.svg",
-        imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "A Place of Our Own",
-        caption: "Somewhere along the way, 'my place' and 'your place' became simply 'ours.'",
-      },
-      {
-        image: "assets/images/journey-05.svg",
-        imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Right Now",
-        caption: "Still choosing you. Still grateful. Still writing this story with you.",
-      },
-      {
-        image: "assets/images/journey-06.svg",
-        imageAlt: "A milestone in our journey",
-        date: "This year",
-        title: "What's Next",
-        caption: "Whatever comes next, I already know I want you next to me for it.",
-      },
     ],
   },
 
