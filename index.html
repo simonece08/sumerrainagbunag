@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday</title>
+<meta name="description" content="A story, for her." />
+
+<!-- Fonts: Fraunces (display) + Public Sans (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Signature scroll element: a thread of light that grows as her story unfolds -->
+<div class="sunlight-ribbon"><div class="sunlight-ribbon__fill" id="ribbonFill"></div></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <img class="hero__image" id="heroImage" src="" alt="" />
+  <div class="hero__scrim"></div>
+  <div class="hero__glow"></div>
+  <div class="hero__content">
+    <p class="eyebrow hero__eyebrow" id="heroEyebrow"></p>
+    <h1 class="hero__title" id="heroTitle"></h1>
+    <p class="hero__subtitle" id="heroSubtitle"></p>
+    <button class="hero__cta" id="heroCta">
+      <span id="heroCtaLabel"></span>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v11M2 8l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ================= BEFORE WE MET ================= -->
+<section class="section section--cream" id="before-we-met">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow" id="beforeEyebrow"></p>
+      <h2 class="section__heading" id="beforeHeading"></h2>
+      <p class="section__intro" id="beforeIntro"></p>
+    </div>
+    <div class="before-grid" id="beforeGrid"></div>
+  </div>
+</section>
+
+<!-- ================= THE DAY WE MET ================= -->
+<section class="section meet" id="day-we-met">
+  <div class="wrap">
+    <div class="meet__grid">
+      <div class="meet__image-wrap reveal">
+        <img id="meetImage" src="" alt="" />
+      </div>
+      <div class="reveal reveal-delay-1">
+        <p class="eyebrow meet__eyebrow" id="meetEyebrow"></p>
+        <div class="meet__meta" id="meetMeta"></div>
+        <h2 class="meet__title" id="meetTitle"></h2>
+        <p class="meet__caption" id="meetCaption"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FIRST MEMORIES ================= -->
+<section class="section section--cream" id="first-memories">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow" id="memoriesEyebrow"></p>
+      <h2 class="section__heading" id="memoriesHeading"></h2>
+      <p class="section__intro" id="memoriesIntro"></p>
+    </div>
+    <div class="memories-grid" id="memoriesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= OUR JOURNEY ================= -->
+<section class="section section--cream" id="journey">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow" id="journeyEyebrow"></p>
+      <h2 class="section__heading" id="journeyHeading"></h2>
+      <p class="section__intro" id="journeyIntro"></p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ================= THE LITTLE THINGS ================= -->
+<section class="section section--cream" id="little-things">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow" id="littleEyebrow"></p>
+      <h2 class="section__heading" id="littleHeading"></h2>
+      <p class="section__intro" id="littleIntro"></p>
+    </div>
+    <div class="little-grid" id="littleGrid"></div>
+  </div>
+</section>
+
+<!-- ================= FINAL MESSAGE ================= -->
+<section class="finale" id="finale">
+  <img class="finale__image" id="finaleImage" src="" alt="" />
+  <div class="finale__scrim"></div>
+  <div class="finale__glow"></div>
+  <div class="finale__content">
+    <p class="eyebrow finale__eyebrow" id="finaleEyebrow"></p>
+    <h2 class="finale__heading" id="finaleHeading"></h2>
+    <p class="finale__message" id="finaleMessage"></p>
+    <p class="finale__signature" id="finaleSignature"></p>
+    <p class="finale__foot">Made with love, for you</p>
+  </div>
+</section>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
