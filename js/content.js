@@ -1,16 +1,5 @@
 /* ============================================================
    CONTENT.JS — THE ONLY FILE YOU NEED TO EDIT
-   ============================================================
-   This file holds every photo, caption, date, and word of text
-   on the site. To personalize the site:
-
-   1. Add your real photos into /assets/images/
-      (any filename you like — jpg, png, or webp all work)
-   2. Update the "src" paths below to point to your new files
-   3. Edit the text fields (title, caption, date, location...)
-
-   You never need to touch index.html, style.css, or main.js
-   to change content — this file is the single source of truth.
    ============================================================ */
 
 const SITE_CONTENT = {
@@ -36,12 +25,12 @@ const SITE_CONTENT = {
   },
 
   // ----------------------------------------------------------
-  // 2. BEFORE WE MET
+  // 2. BEFORE WE MET — Horizontal scrollable reel
   // ----------------------------------------------------------
   beforeWeMet: {
     eyebrow: "Chapter One",
     heading: "Night Changes",
-    intro: "Time has a quiet way of moving when you aren’t looking. The magic you bring to the world, remains the same.",
+    intro: "Time has a quiet way of moving when you aren't looking. The magic you bring to the world, remains the same.",
     music: {
       src: "assets/audio/chapter-1.mp3",
       playLabel: "Play the soundtrack",
@@ -95,10 +84,6 @@ const SITE_CONTENT = {
 
   // ----------------------------------------------------------
   // 3. OUR FIRST CHAT
-  //    An animated recreation of our very first conversation.
-  //    Edit "messages" to change the dialogue — each entry needs
-  //    a sender ("me" or "her") and text. Add "replyTo" to show
-  //    it as a reply to an earlier line, like the original chat.
   // ----------------------------------------------------------
   conversations: {
     eyebrow: "Chapter Two",
@@ -110,7 +95,7 @@ const SITE_CONTENT = {
       pauseLabel: "Pause the soundtrack",
     },
     chat: {
-      contactName: "Her ♡",
+      contactName: "cr0issum",
       date: "July 3, 2025",
       continueLabel: "Continue our story →",
       messages: [
@@ -146,8 +131,6 @@ const SITE_CONTENT = {
       pauseLabel: "Pause the soundtrack",
     },
     liveClock: {
-      // Asia/Manila is UTC+8 year-round (no daylight saving), so this
-      // fixed offset is timezone-accurate for every visitor everywhere.
       startISO: "2026-02-22T16:30:00+08:00",
       heading: "We've been part of each other's story for…",
       subtitle: "Every second since the moment our story began.",
@@ -220,43 +203,6 @@ const SITE_CONTENT = {
   },
 
   // ----------------------------------------------------------
-  // 7. OUR JOURNEY TOGETHER (vertical timeline)
-  // ----------------------------------------------------------
-  journey: {
-    eyebrow: "Chapter Six",
-    heading: "If I Could Fly",
-    intro: "From then to now — a timeline of the moments that built us.",
-    music: {
-      src: "assets/audio/chapter-6.mp3",
-      playLabel: "Play the soundtrack",
-      pauseLabel: "Pause the soundtrack",
-    },
-    milestones: [
-      {
-        image: "assets/images/journey-01.jpg",
-        imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Our First Trip",
-        caption: "Somewhere new, together for the first time — and it already felt like home.",
-      },
-      {
-        image: "assets/images/journey-02.jpg",
-        imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Through the Hard Days",
-        caption: "We learned that we're better at facing life together than apart.",
-      },
-      {
-        image: "assets/images/journey-03.jpg",
-        imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Right Now",
-        caption: "Still choosing you. Still grateful. Still writing this story with you.",
-      },
-    ],
-  },
-
-  // ----------------------------------------------------------
   // 6. THE LITTLE THINGS
   // ----------------------------------------------------------
   littleThings: {
@@ -268,9 +214,6 @@ const SITE_CONTENT = {
       playLabel: "Play the soundtrack",
       pauseLabel: "Pause the soundtrack",
     },
-    // Each icon reveals one memory. "key" controls its click animation
-    // (see main.js ICON_ANIMATIONS) — keep the 9 keys as they are, but
-    // feel free to change icon, image, caption, and date freely.
     items: [
       {
         key: "gift",
@@ -352,6 +295,43 @@ const SITE_CONTENT = {
         imageAlt: "A little everyday moment",
         date: "",
         caption: "You, half-asleep, still reaching for my hand.",
+      },
+    ],
+  },
+
+  // ----------------------------------------------------------
+  // 7. OUR JOURNEY TOGETHER
+  // ----------------------------------------------------------
+  journey: {
+    eyebrow: "Chapter Six",
+    heading: "If I Could Fly",
+    intro: "From then to now — a timeline of the moments that built us.",
+    music: {
+      src: "assets/audio/chapter-6.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
+    milestones: [
+      {
+        image: "assets/images/journey-01.jpg",
+        imageAlt: "A milestone in our journey",
+        date: "Year",
+        title: "Our First Trip",
+        caption: "Somewhere new, together for the first time — and it already felt like home.",
+      },
+      {
+        image: "assets/images/journey-02.jpg",
+        imageAlt: "A milestone in our journey",
+        date: "Year",
+        title: "Through the Hard Days",
+        caption: "We learned that we're better at facing life together than apart.",
+      },
+      {
+        image: "assets/images/journey-03.jpg",
+        imageAlt: "A milestone in our journey",
+        date: "Year",
+        title: "Right Now",
+        caption: "Still choosing you. Still grateful. Still writing this story with you.",
       },
     ],
   },

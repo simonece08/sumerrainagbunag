@@ -67,7 +67,7 @@ a { color: inherit; }
 }
 
 /* ============================================================
-   SUNLIGHT RIBBON — signature element
+   SUNLIGHT RIBBON
    ============================================================ */
 .sunlight-ribbon {
   position: fixed;
@@ -394,8 +394,9 @@ section { position: relative; }
   color: var(--brown-soft);
   max-width: 56ch;
 }
+
 /* ============================================================
-   CHAPTER 1 — HORIZONTAL SCROLL REEL (FIXED)
+   CHAPTER 1 — HORIZONTAL SCROLL REEL WITH DECORATIVE ICONS
    ============================================================ */
 .chapter-reel {
   position: relative;
@@ -433,7 +434,7 @@ section { position: relative; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   min-height: 70vh;
   max-height: 90vh;
   position: relative;
@@ -456,11 +457,101 @@ section { position: relative; }
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+}
+
+/* Decorative elements container */
+.chapter-reel__decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.chapter-reel__deco {
+  position: absolute;
+  font-size: clamp(20px, 3vw, 36px);
+  opacity: 0.3;
+  animation: deco-float 6s ease-in-out infinite;
+  transform-origin: center;
+  user-select: none;
+}
+
+.chapter-reel__deco--top-left {
+  top: -10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+.chapter-reel__deco--top-right {
+  top: -5%;
+  right: -5%;
+  animation-delay: 1s;
+}
+.chapter-reel__deco--bottom-left {
+  bottom: -5%;
+  left: -8%;
+  animation-delay: 2s;
+}
+.chapter-reel__deco--bottom-right {
+  bottom: -10%;
+  right: -5%;
+  animation-delay: 0.5s;
+}
+.chapter-reel__deco--center-left {
+  top: 40%;
+  left: -12%;
+  animation-delay: 1.5s;
+}
+.chapter-reel__deco--center-right {
+  top: 35%;
+  right: -12%;
+  animation-delay: 0.8s;
+}
+.chapter-reel__deco--mid-left {
+  top: 55%;
+  left: -8%;
+  animation-delay: 2.5s;
+}
+.chapter-reel__deco--mid-right {
+  top: 50%;
+  right: -8%;
+  animation-delay: 1.2s;
+}
+.chapter-reel__deco--tiny-1 {
+  top: 15%;
+  left: 5%;
+  font-size: 14px;
+  animation-delay: 0.3s;
+}
+.chapter-reel__deco--tiny-2 {
+  bottom: 15%;
+  right: 5%;
+  font-size: 14px;
+  animation-delay: 1.8s;
+}
+
+@keyframes deco-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(4deg); }
+}
+
+.chapter-reel__deco--spin {
+  animation: deco-spin 20s linear infinite;
+}
+
+.chapter-reel__deco--spin-slow {
+  animation: deco-spin 30s linear infinite reverse;
+}
+
+@keyframes deco-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .chapter-reel__slide-image {
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
   aspect-ratio: 4/5;
   border-radius: 4px;
   overflow: hidden;
@@ -470,6 +561,8 @@ section { position: relative; }
   transform: rotate(var(--rotation, 0deg));
   transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .chapter-reel__slide-image img {
@@ -486,9 +579,11 @@ section { position: relative; }
 
 .chapter-reel__slide-content {
   margin-top: 16px;
-  max-width: 480px;
+  max-width: 460px;
   width: 100%;
   padding: 0 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .chapter-reel__slide-date {
@@ -517,6 +612,27 @@ section { position: relative; }
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 100%;
+}
+
+/* Decorative divider under title */
+.chapter-reel__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 6px auto 10px;
+  opacity: 0.4;
+}
+
+.chapter-reel__divider span {
+  font-size: 12px;
+  color: var(--gold-deep);
+}
+
+.chapter-reel__divider-line {
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
 }
 
 .chapter-reel__nav {
@@ -585,7 +701,7 @@ section { position: relative; }
     max-height: 80vh;
   }
   .chapter-reel__slide-image {
-    max-width: 320px;
+    max-width: 280px;
   }
   .chapter-reel__slide-image {
     transform: rotate(0deg) !important;
@@ -599,6 +715,25 @@ section { position: relative; }
   .chapter-reel__slide-caption {
     font-size: 13px;
   }
+  .chapter-reel__deco {
+    font-size: 18px !important;
+    opacity: 0.25;
+  }
+  .chapter-reel__deco--top-left,
+  .chapter-reel__deco--top-right,
+  .chapter-reel__deco--bottom-left,
+  .chapter-reel__deco--bottom-right,
+  .chapter-reel__deco--center-left,
+  .chapter-reel__deco--center-right,
+  .chapter-reel__deco--mid-left,
+  .chapter-reel__deco--mid-right {
+    display: none;
+  }
+  .chapter-reel__deco--tiny-1,
+  .chapter-reel__deco--tiny-2 {
+    display: block !important;
+    font-size: 16px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -608,7 +743,7 @@ section { position: relative; }
     max-height: 85vh;
   }
   .chapter-reel__slide-image {
-    max-width: 240px;
+    max-width: 200px;
     padding: 6px 6px 10px;
   }
   .chapter-reel__slide-content {
@@ -635,6 +770,10 @@ section { position: relative; }
     width: 14px;
     height: 14px;
   }
+  .chapter-reel__deco--tiny-1,
+  .chapter-reel__deco--tiny-2 {
+    font-size: 12px !important;
+  }
 }
 
 /* Reduced motion */
@@ -645,7 +784,11 @@ section { position: relative; }
   .chapter-reel__scroll-hint {
     animation: none;
   }
+  .chapter-reel__deco {
+    animation: none !important;
+  }
 }
+
 /* ============================================================
    BEFORE WE MET — Original card styles (kept for compatibility)
    ============================================================ */
@@ -707,7 +850,7 @@ section { position: relative; }
 }
 
 /* ============================================================
-   THE DAY WE MET — feature moment
+   THE DAY WE MET
    ============================================================ */
 .meet {
   background: var(--brown);
@@ -865,7 +1008,7 @@ section { position: relative; }
 }
 
 /* ============================================================
-   FIRST MEMORIES — mixed scrapbook layout
+   FIRST MEMORIES
    ============================================================ */
 .memories-grid {
   display: grid;
@@ -1092,7 +1235,7 @@ section { position: relative; }
 }
 
 /* ============================================================
-   THE LITTLE THINGS — 9 hidden-memory icons
+   THE LITTLE THINGS
    ============================================================ */
 .little-grid {
   display: grid;
@@ -1327,7 +1470,6 @@ section { position: relative; }
   .icon-tile__label { font-size: 9.5px; }
 }
 
-
 /* ============================================================
    FINAL MESSAGE
    ============================================================ */
@@ -1405,7 +1547,7 @@ section { position: relative; }
 }
 
 /* ============================================================
-   FINAL MESSAGE REVEAL — cinematic finale
+   FINAL MESSAGE REVEAL
    ============================================================ */
 .finale-reveal {
   opacity: 0;
@@ -1772,7 +1914,7 @@ section { position: relative; }
 }
 
 /* ============================================================
-   OUR FIRST CHAT — animated chat recreation
+   OUR FIRST CHAT
    ============================================================ */
 .chat-phone {
   max-width: 400px;
@@ -2136,5 +2278,8 @@ section { position: relative; }
   }
   .chapter-reel__wrapper {
     scroll-behavior: auto;
+  }
+  .chapter-reel__deco {
+    animation: none !important;
   }
 }

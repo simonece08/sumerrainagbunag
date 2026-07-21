@@ -30,157 +30,213 @@
     $("before-we-met").scrollIntoView({ behavior: "smooth" });
   });
 
-  /* ---------- BEFORE WE MET — Horizontal Reel ---------- */
-setText("beforeEyebrow", C.beforeWeMet.eyebrow);
-setText("beforeHeading", C.beforeWeMet.heading);
-setText("beforeIntro", C.beforeWeMet.intro);
+  /* ---------- BEFORE WE MET — Horizontal Reel with Decorations ---------- */
+  setText("beforeEyebrow", C.beforeWeMet.eyebrow);
+  setText("beforeHeading", C.beforeWeMet.heading);
+  setText("beforeIntro", C.beforeWeMet.intro);
 
-// Build the horizontal reel
-(function initBeforeReel() {
-  const wrapper = $("beforeReel");
-  const nav = $("beforeReelNav");
-  const photos = C.beforeWeMet.photos || [];
-  
-  if (!wrapper || !nav || photos.length === 0) return;
-  
-  // Build slides with proper text wrapping
-  wrapper.innerHTML = photos.map((p, i) => {
-    const rotations = ['-1.6deg', '1.2deg', '-0.8deg', '2deg', '-1.2deg', '0.6deg'];
-    const rotation = rotations[i % rotations.length];
+  (function initBeforeReel() {
+    const wrapper = $("beforeReel");
+    const nav = $("beforeReelNav");
+    const photos = C.beforeWeMet.photos || [];
     
-    // Clean and truncate caption if needed for mobile
-    let caption = p.caption || '';
+    if (!wrapper || !nav || photos.length === 0) return;
     
-    return `
-      <div class="chapter-reel__slide" data-index="${i}" role="tabpanel" aria-label="Memory ${i + 1} of ${photos.length}">
-        <div class="chapter-reel__slide-inner">
-          <div class="chapter-reel__slide-image" style="--rotation: ${rotation}">
-            <img src="${p.image}" alt="${escapeHTML(p.imageAlt || '')}" loading="lazy" />
-          </div>
-          <div class="chapter-reel__slide-content">
-            ${p.date ? `<span class="chapter-reel__slide-date">${escapeHTML(p.date)}</span>` : ''}
-            ${p.title ? `<h3 class="chapter-reel__slide-title">${escapeHTML(p.title)}</h3>` : ''}
-            ${caption ? `<p class="chapter-reel__slide-caption">${escapeHTML(caption)}</p>` : ''}
+    // Decorative icon sets for each slide based on theme
+    const decoSets = [
+      // Slide 0: Pure Joy - sun, sparkles, hearts
+      {
+        icons: ['☀️', '✨', '💛', '🌸', '⭐', '🌻', '💫', '🌺'],
+        positions: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center-left', 'center-right', 'mid-left', 'mid-right']
+      },
+      // Slide 1: Collecting Victories - stars, crowns, trophies
+      {
+        icons: ['⭐', '👑', '🏆', '✨', '🌟', '🎯', '💫', '🌈'],
+        positions: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center-left', 'center-right', 'mid-left', 'mid-right']
+      },
+      // Slide 2: Stepping Into Her Own - flowers, butterflies
+      {
+        icons: ['🌸', '🦋', '🌷', '💐', '🌺', '🌻', '🌹', '🌿'],
+        positions: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center-left', 'center-right', 'mid-left', 'mid-right']
+      },
+      // Slide 3: Chasing What She Loved - rockets, stars, music
+      {
+        icons: ['🚀', '⭐', '🎵', '🌙', '✨', '🎶', '💫', '🌈'],
+        positions: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center-left', 'center-right', 'mid-left', 'mid-right']
+      },
+      // Slide 4: Rooted in Love - hearts, plants, home
+      {
+        icons: ['💚', '🌱', '🏠', '💛', '🌳', '🌸', '💕', '🌿'],
+        positions: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center-left', 'center-right', 'mid-left', 'mid-right']
+      },
+      // Slide 5: The Girl I Fell for - hearts, stars, sparkles
+      {
+        icons: ['💖', '✨', '⭐', '🌹', '💕', '🌟', '💗', '🌺'],
+        positions: ['top-left', 'top-right', 'bottom-left', 'bottom-right', 'center-left', 'center-right', 'mid-left', 'mid-right']
+      }
+    ];
+    
+    // Build slides with decorations
+    wrapper.innerHTML = photos.map((p, i) => {
+      const rotations = ['-1.6deg', '1.2deg', '-0.8deg', '2deg', '-1.2deg', '0.6deg'];
+      const rotation = rotations[i % rotations.length];
+      const decoSet = decoSets[i % decoSets.length];
+      
+      // Build decoration HTML
+      let decoHTML = '';
+      if (decoSet) {
+        decoSet.icons.forEach((icon, idx) => {
+          const pos = decoSet.positions[idx] || 'top-left';
+          const isTiny = idx >= 8;
+          const extraClass = isTiny ? ` chapter-reel__deco--tiny-${idx - 7}` : '';
+          decoHTML += `<span class="chapter-reel__deco chapter-reel__deco--${pos}${extraClass}" aria-hidden="true">${icon}</span>`;
+        });
+      }
+      
+      let caption = p.caption || '';
+      
+      // Add decorative divider
+      const dividerIcons = ['✦', '·', '✦', '·', '✦'];
+      const dividerHTML = `
+        <div class="chapter-reel__divider" aria-hidden="true">
+          <span class="chapter-reel__divider-line"></span>
+          ${dividerIcons.map(icon => `<span>${icon}</span>`).join('')}
+          <span class="chapter-reel__divider-line"></span>
+        </div>
+      `;
+      
+      return `
+        <div class="chapter-reel__slide" data-index="${i}" role="tabpanel" aria-label="Memory ${i + 1} of ${photos.length}">
+          <div class="chapter-reel__slide-inner">
+            <div class="chapter-reel__decorations">
+              ${decoHTML}
+            </div>
+            <div class="chapter-reel__slide-image" style="--rotation: ${rotation}">
+              <img src="${p.image}" alt="${escapeHTML(p.imageAlt || '')}" loading="lazy" />
+            </div>
+            <div class="chapter-reel__slide-content">
+              ${p.date ? `<span class="chapter-reel__slide-date">${escapeHTML(p.date)}</span>` : ''}
+              ${p.title ? `<h3 class="chapter-reel__slide-title">${escapeHTML(p.title)}</h3>` : ''}
+              ${dividerHTML}
+              ${caption ? `<p class="chapter-reel__slide-caption">${escapeHTML(caption)}</p>` : ''}
+            </div>
           </div>
         </div>
-      </div>
-    `;
-  }).join('');
-  
-  // Build navigation dots
-  nav.innerHTML = photos.map((_, i) => `
-    <button class="chapter-reel__dot ${i === 0 ? 'is-active' : ''}" 
-            data-index="${i}" 
-            role="tab" 
-            aria-label="Go to memory ${i + 1}"
-            aria-selected="${i === 0 ? 'true' : 'false'}">
-    </button>
-  `).join('');
-  
-  const slides = wrapper.querySelectorAll('.chapter-reel__slide');
-  const dots = nav.querySelectorAll('.chapter-reel__dot');
-  let currentIndex = 0;
-  let isScrolling = false;
-  
-  function updateActive(index) {
-    dots.forEach((dot, i) => {
-      const isActive = i === index;
-      dot.classList.toggle('is-active', isActive);
-      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-    slides.forEach((slide, i) => {
-      slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
-    });
-    currentIndex = index;
-  }
-  
-  function goToSlide(index) {
-    if (isScrolling || index === currentIndex) return;
-    isScrolling = true;
-    const slide = slides[index];
-    if (slide) {
-      slide.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-      updateActive(index);
-    }
-    setTimeout(() => { isScrolling = false; }, 600);
-  }
-  
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      const index = parseInt(dot.dataset.index);
-      goToSlide(index);
-    });
-  });
-  
-  // Keyboard navigation
-  wrapper.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-      e.preventDefault();
-      const next = (currentIndex + 1) % photos.length;
-      goToSlide(next);
-    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-      e.preventDefault();
-      const prev = (currentIndex - 1 + photos.length) % photos.length;
-      goToSlide(prev);
-    }
-  });
-  
-  // Detect scroll to update active dot
-  let scrollTimeout;
-  wrapper.addEventListener('scroll', () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      const scrollLeft = wrapper.scrollLeft;
-      const slideWidth = wrapper.offsetWidth;
-      const newIndex = Math.round(scrollLeft / slideWidth);
-      if (newIndex !== currentIndex && newIndex >= 0 && newIndex < photos.length) {
-        updateActive(newIndex);
-      }
-    }, 100);
-  }, { passive: true });
-  
-  updateActive(0);
-  
-  // Auto-advance slides
-  let autoAdvanceTimer;
-  let isInViewport = false;
-  
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        isInViewport = entry.isIntersecting;
-        if (isInViewport) startAutoAdvance();
-        else stopAutoAdvance();
+      `;
+    }).join('');
+    
+    // Build navigation dots
+    nav.innerHTML = photos.map((_, i) => `
+      <button class="chapter-reel__dot ${i === 0 ? 'is-active' : ''}" 
+              data-index="${i}" 
+              role="tab" 
+              aria-label="Go to memory ${i + 1}"
+              aria-selected="${i === 0 ? 'true' : 'false'}">
+      </button>
+    `).join('');
+    
+    const slides = wrapper.querySelectorAll('.chapter-reel__slide');
+    const dots = nav.querySelectorAll('.chapter-reel__dot');
+    let currentIndex = 0;
+    let isScrolling = false;
+    
+    function updateActive(index) {
+      dots.forEach((dot, i) => {
+        const isActive = i === index;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-    },
-    { threshold: 0.3 }
-  );
-  
-  const section = document.getElementById('before-we-met');
-  if (section) observer.observe(section);
-  
-  function startAutoAdvance() {
-    stopAutoAdvance();
-    autoAdvanceTimer = setInterval(() => {
-      if (!isInViewport) return;
-      const next = (currentIndex + 1) % photos.length;
-      goToSlide(next);
-    }, 6000);
-  }
-  
-  function stopAutoAdvance() {
-    if (autoAdvanceTimer) {
-      clearInterval(autoAdvanceTimer);
-      autoAdvanceTimer = null;
+      slides.forEach((slide, i) => {
+        slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+      });
+      currentIndex = index;
     }
-  }
-  
-  wrapper.addEventListener('pointerdown', stopAutoAdvance);
-  wrapper.addEventListener('touchstart', stopAutoAdvance);
-  wrapper.addEventListener('pointerup', () => setTimeout(startAutoAdvance, 5000));
-  wrapper.addEventListener('touchend', () => setTimeout(startAutoAdvance, 5000));
-  window.addEventListener('beforeunload', stopAutoAdvance);
-})();
+    
+    function goToSlide(index) {
+      if (isScrolling || index === currentIndex) return;
+      isScrolling = true;
+      const slide = slides[index];
+      if (slide) {
+        slide.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+        updateActive(index);
+      }
+      setTimeout(() => { isScrolling = false; }, 600);
+    }
+    
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index);
+        goToSlide(index);
+      });
+    });
+    
+    wrapper.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = (currentIndex + 1) % photos.length;
+        goToSlide(next);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = (currentIndex - 1 + photos.length) % photos.length;
+        goToSlide(prev);
+      }
+    });
+    
+    let scrollTimeout;
+    wrapper.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const scrollLeft = wrapper.scrollLeft;
+        const slideWidth = wrapper.offsetWidth;
+        const newIndex = Math.round(scrollLeft / slideWidth);
+        if (newIndex !== currentIndex && newIndex >= 0 && newIndex < photos.length) {
+          updateActive(newIndex);
+        }
+      }, 100);
+    }, { passive: true });
+    
+    updateActive(0);
+    
+    let autoAdvanceTimer;
+    let isInViewport = false;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isInViewport = entry.isIntersecting;
+          if (isInViewport) startAutoAdvance();
+          else stopAutoAdvance();
+        });
+      },
+      { threshold: 0.3 }
+    );
+    
+    const section = document.getElementById('before-we-met');
+    if (section) observer.observe(section);
+    
+    function startAutoAdvance() {
+      stopAutoAdvance();
+      autoAdvanceTimer = setInterval(() => {
+        if (!isInViewport) return;
+        const next = (currentIndex + 1) % photos.length;
+        goToSlide(next);
+      }, 6000);
+    }
+    
+    function stopAutoAdvance() {
+      if (autoAdvanceTimer) {
+        clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+      }
+    }
+    
+    wrapper.addEventListener('pointerdown', stopAutoAdvance);
+    wrapper.addEventListener('touchstart', stopAutoAdvance);
+    wrapper.addEventListener('pointerup', () => setTimeout(startAutoAdvance, 5000));
+    wrapper.addEventListener('touchend', () => setTimeout(startAutoAdvance, 5000));
+    window.addEventListener('beforeunload', stopAutoAdvance);
+  })();
+
   /* ---------- THE DAY WE MET ---------- */
   setImg("meetImage", C.dayWeMet.image, C.dayWeMet.imageAlt);
   setText("meetEyebrow", C.dayWeMet.eyebrow);
@@ -272,7 +328,7 @@ setText("beforeIntro", C.beforeWeMet.intro);
   setText("finaleSignature", C.finalMessage.signature);
 
   /* ============================================================
-     BIRTHDAY ENVELOPE OVERLAY
+     BIRTHDAY ENVELOPE OVERLAY — Scrolls to TOP of page (Hero section)
      ============================================================ */
   (function initBirthdayEnvelope() {
     const overlay = $("birthdayOverlay");
@@ -288,20 +344,13 @@ setText("beforeIntro", C.beforeWeMet.intro);
       this.classList.add("is-open");
     });
     
-    // Handle CTA click - close overlay and scroll to top of Chapter 1
+    // Handle CTA click - close overlay and scroll to the TOP of the page
     cta.addEventListener("click", function(e) {
       e.stopPropagation();
       overlay.classList.add("is-hidden");
-      // Scroll to the top of Chapter 1 with smooth behavior
+      // Scroll to the very top of the page (Hero section with "My Love, Sumer")
       setTimeout(() => {
-        const target = $("before-we-met");
-        if (target) {
-          // Get the top position of the section
-          const rect = target.getBoundingClientRect();
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          const targetPosition = rect.top + scrollTop - 20;
-          window.scrollTo({ top: targetPosition, behavior: "smooth" });
-        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }, 600);
     });
   })();
