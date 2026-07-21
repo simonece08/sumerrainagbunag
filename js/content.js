@@ -19,8 +19,8 @@ const SITE_CONTENT = {
   // META — browser tab title
   // ----------------------------------------------------------
   meta: {
-    pageTitle: "Happy Birthday, My Love, Mahal, Baby",
-    herName: "Sumer Rain Agbunag",
+    pageTitle: "Happy Birthday, My Love",
+    herName: "Her Name",
   },
 
   // ----------------------------------------------------------
@@ -29,9 +29,9 @@ const SITE_CONTENT = {
   hero: {
     image: "assets/images/hero.jpg",
     imageAlt: "A portrait photo of her",
-    eyebrow: "A story, for you my birthday girl",
-    title: "Once upon a time,\nthere was a girl…",
-    subtitle: "And then, somehow, our stories became one.",
+    eyebrow: "A story, for you",
+    title: "My Love, \nSumer",
+    subtitle: "Once upon a time, there was a girl.\n\nAnd then, somehow, our stories became one.",
     cta: "Begin Our Story",
   },
 
@@ -40,28 +40,33 @@ const SITE_CONTENT = {
   // ----------------------------------------------------------
   beforeWeMet: {
     eyebrow: "Chapter One",
-    heading: "Before We Met",
-    intro: "Long before I knew your name, you were already living a whole life — one full of small joys, bumpy roads, quiet dreams, and moments that were entirely her own.",
+    heading: "Night Changes",
+    intro: "Time has a quiet way of moving when you aren’t looking. The magic you bring to the world, remains the same.",
+    music: {
+      src: "assets/audio/chapter-1.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
     photos: [
       {
         image: "assets/images/before-we-met-01.jpg",
         imageAlt: "A photo from before we met",
         date: "Somewhere, back then",
-        title: "A Girl, Becoming",
-        caption: "Before I knew you, you were already becoming the person I would someday love.",
+        title: "Pure Joy, From the Start",
+        caption: "Before I knew you, you are always the girl with same eyes as now. You're a human sunshine.",
       },
       {
         image: "assets/images/before-we-met-02.jpg",
         imageAlt: "A photo from before we met",
         date: "",
-        title: "Her Own Adventures",
-        caption: "You were out there collecting stories, long before you had any idea I'd want to hear every one of them.",
+        title: "Collecting Her Victories",
+        caption: "You were out there collecting stories and achievement, long before you had any idea I'd want to hear every one of them now.",
       },
       {
         image: "assets/images/before-we-met-03.jpg",
         imageAlt: "A photo from before we met",
         date: "",
-        title: "Little Moments",
+        title: "Stepping Into Her Own",
         caption: "Ordinary days that, looking back, were quietly shaping the woman I'd fall for.",
       },
       {
@@ -69,46 +74,99 @@ const SITE_CONTENT = {
         imageAlt: "A photo from before we met",
         date: "",
         title: "Chasing What She Loved",
-        caption: "You already knew how to chase joy on your own terms — that never changed.",
+        caption: "You always know what you wanted and you never stopped chasing it, my RPM.",
       },
       {
         image: "assets/images/before-we-met-05.jpg",
         imageAlt: "A photo from before we met",
         date: "",
-        title: "The People Who Shaped Her",
-        caption: "The friends, family, and moments that raised the woman I'd eventually meet.",
+        title: "Rooted in Love",
+        caption: "The family, friends, relationships and moments that raised the woman I'd eventually meet.",
       },
       {
         image: "assets/images/before-we-met-06.jpg",
         imageAlt: "A photo from before we met",
         date: "",
-        title: "Still Becoming",
-        caption: "Every version of you before me was already worth loving.",
+        title: "The Girl I Fell for",
+        caption: "Every version of you before me was already worth loving. You're always a glimmer of joy to everyone around you.",
       },
     ],
   },
 
   // ----------------------------------------------------------
-  // 3. THE DAY WE MET
+  // 3. OUR FIRST CHAT
+  //    An animated recreation of our very first conversation.
+  //    Edit "messages" to change the dialogue — each entry needs
+  //    a sender ("me" or "her") and text. Add "replyTo" to show
+  //    it as a reply to an earlier line, like the original chat.
   // ----------------------------------------------------------
-  dayWeMet: {
+  conversations: {
     eyebrow: "Chapter Two",
-    heading: "The Day We Met, Our First Date",
-    date: "February 22, 2026",
-    location: "Gondola Coffee",
-    title: "And Then, Everything Changed and Started",
-    caption: "We didn't know it yet, but that was the last ordinary day I'd ever have. Every day since has had you in it.",
-    image: "assets/images/meeting-day.jpg",
-    imageAlt: "A photo from the day we met",
+    heading: "Late Night Talking",
+    intro: "Where it all began. Just a small, quiet message in time unknowingly planting the seeds for the grandest love story of my life. I hope I can make you remember the moment.",
+    music: {
+      src: "assets/audio/chapter-2.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
+    chat: {
+      contactName: "Her ♡",
+      date: "July 3, 2025",
+      continueLabel: "Continue our story →",
+      messages: [
+        { sender: "me", text: "Hiii 😆" },
+        { sender: "her", text: "good morning 😆" },
+        { sender: "me", text: "finally nagreply ka na! 😂😂" },
+        { sender: "me", text: "idk how to start, pero you're really pretty ha 😆" },
+        {
+          sender: "her",
+          text: "ay totoo ba yung sinend mo na emoji before hahahaha",
+          replyTo: "finally nagreply ka na! 😂😂",
+        },
+        { sender: "her", text: "akala ko kasi napindot lang 😆" },
+      ],
+    },
   },
 
   // ----------------------------------------------------------
-  // 4. OUR FIRST MEMORIES
+  // 4. THE DAY WE MET
+  // ----------------------------------------------------------
+  dayWeMet: {
+    eyebrow: "Chapter Three",
+    heading: "And Then, Everything Changed",
+    date: "Month Day, Year",
+    location: "Where it happened",
+    title: "Golden",
+    caption: "I didn't know it yet, but that was the last ordinary day I'd ever have. Every day since has had you in it.",
+    image: "assets/images/meeting-day.jpg",
+    imageAlt: "A photo from the day we met",
+    music: {
+      src: "assets/audio/chapter-3.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
+    liveClock: {
+      // Asia/Manila is UTC+8 year-round (no daylight saving), so this
+      // fixed offset is timezone-accurate for every visitor everywhere.
+      startISO: "2026-02-22T16:30:00+08:00",
+      heading: "We've been part of each other's story for…",
+      subtitle: "Every second since the moment our story began.",
+      units: { days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds" },
+    },
+  },
+
+  // ----------------------------------------------------------
+  // 5. OUR FIRST MEMORIES
   // ----------------------------------------------------------
   firstMemories: {
-    eyebrow: "Chapter Three",
-    heading: "Our First Memories",
+    eyebrow: "Chapter Four",
+    heading: "Adore You",
     intro: "The early days — nervous laughter, long conversations, and the slow, wonderful realization that I never wanted them to end.",
+    music: {
+      src: "assets/audio/chapter-4.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
     photos: [
       {
         image: "assets/images/first-memory-01.jpg",
@@ -134,40 +192,45 @@ const SITE_CONTENT = {
         caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
         layout: "polaroid",
       },
-            {
+      {
         image: "assets/images/first-memory-04.jpg",
         imageAlt: "An early memory together",
-        date: "A few weeks in",
-        title: "The Day I Knew",
-        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
-        layout: "polaroid",
+        date: "",
+        title: "Us, Learning Each Other",
+        caption: "Every small thing I learned about you became a favorite thing.",
+        layout: "editorial",
       },
-            {
+      {
         image: "assets/images/first-memory-05.jpg",
         imageAlt: "An early memory together",
-        date: "A few weeks in",
-        title: "The Day I Knew",
-        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
+        date: "",
+        title: "The First 'I Miss You'",
+        caption: "I hadn't even left yet and I already missed you.",
         layout: "polaroid",
       },
-            {
+      {
         image: "assets/images/first-memory-06.jpg",
         imageAlt: "An early memory together",
-        date: "A few weeks in",
-        title: "The Day I Knew",
-        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
-        layout: "polaroid",
+        date: "",
+        title: "Meeting Each Other's World",
+        caption: "You started showing up in the parts of my life that mattered most.",
+        layout: "editorial",
       },
     ],
   },
 
   // ----------------------------------------------------------
-  // 5. OUR JOURNEY TOGETHER (vertical timeline)
+  // 7. OUR JOURNEY TOGETHER (vertical timeline)
   // ----------------------------------------------------------
   journey: {
-    eyebrow: "Chapter Four",
-    heading: "Our Journey Together",
+    eyebrow: "Chapter Six",
+    heading: "If I Could Fly",
     intro: "From then to now — a timeline of the moments that built us.",
+    music: {
+      src: "assets/audio/chapter-6.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
     milestones: [
       {
         image: "assets/images/journey-01.jpg",
@@ -180,15 +243,15 @@ const SITE_CONTENT = {
         image: "assets/images/journey-02.jpg",
         imageAlt: "A milestone in our journey",
         date: "Year",
-        title: "Meeting the People We Love",
-        caption: "You met the people who matter most to me. They understood, instantly, why I love you.",
+        title: "Through the Hard Days",
+        caption: "We learned that we're better at facing life together than apart.",
       },
       {
         image: "assets/images/journey-03.jpg",
         imageAlt: "A milestone in our journey",
         date: "Year",
-        title: "Through the Hard Days",
-        caption: "We learned that we're better at facing life together than apart.",
+        title: "Right Now",
+        caption: "Still choosing you. Still grateful. Still writing this story with you.",
       },
     ],
   },
@@ -198,58 +261,93 @@ const SITE_CONTENT = {
   // ----------------------------------------------------------
   littleThings: {
     eyebrow: "Chapter Five",
-    heading: "The Little Things",
-    intro: "Not every memory needs a big occasion. Some of my favorites are the smallest ones.",
+    heading: "Little Things",
+    intro: "Nine little things, hidden away. Tap an icon to reveal the memory behind it.",
+    music: {
+      src: "assets/audio/chapter-5.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
+    // Each icon reveals one memory. "key" controls its click animation
+    // (see main.js ICON_ANIMATIONS) — keep the 9 keys as they are, but
+    // feel free to change icon, image, caption, and date freely.
     items: [
       {
+        key: "gift",
+        icon: "🎁",
+        label: "Gift",
         image: "assets/images/little-thing-01.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "The way you laugh at your own jokes before you finish telling them.",
       },
       {
+        key: "bread",
+        icon: "🍞",
+        label: "Bread",
         image: "assets/images/little-thing-02.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Lazy Sunday mornings that turned into whole afternoons.",
       },
       {
+        key: "lilies",
+        icon: "🌸",
+        label: "Flower",
         image: "assets/images/little-thing-03.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "That random text that made my entire day better.",
       },
       {
+        key: "waffle",
+        icon: "🧇",
+        label: "Waffle",
         image: "assets/images/little-thing-04.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Every playlist you've ever made me listen to 'just this one song.'",
       },
       {
+        key: "dog",
+        icon: "🐶",
+        label: "Dog",
         image: "assets/images/little-thing-05.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "The face you make when you're concentrating on something silly.",
       },
       {
+        key: "chefHat",
+        icon: "👨‍🍳",
+        label: "Baker",
         image: "assets/images/little-thing-06.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Falling asleep mid-conversation because neither of us wanted the day to end.",
       },
       {
+        key: "yoga",
+        icon: "🧘",
+        label: "Yoga",
         image: "assets/images/little-thing-07.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "The way you always steal the last bite off my plate.",
       },
       {
+        key: "saturn",
+        icon: "🪐",
+        label: "Interstellar",
         image: "assets/images/little-thing-08.jpg",
         imageAlt: "A little everyday moment",
         date: "",
         caption: "Inside jokes that still make us laugh, every single time.",
       },
       {
+        key: "mic",
+        icon: "🎤",
+        label: "Harry",
         image: "assets/images/little-thing-09.jpg",
         imageAlt: "A little everyday moment",
         date: "",
@@ -259,7 +357,7 @@ const SITE_CONTENT = {
   },
 
   // ----------------------------------------------------------
-  // 7. FINAL BIRTHDAY MESSAGE
+  // 8. FINAL BIRTHDAY MESSAGE
   // ----------------------------------------------------------
   finalMessage: {
     image: "assets/images/final-photo.jpg",
