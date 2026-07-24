@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B2A18"/>
+      <stop offset="100%" stop-color="#2A1D10"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1400" fill="url(#bg)"/>
+  <!-- status bar -->
+  <rect x="0" y="0" width="900" height="70" fill="#241a0f"/>
+  <circle cx="60" cy="35" r="6" fill="#F0C869"/>
+  <rect x="780" y="24" width="80" height="22" rx="6" fill="#F0C869" opacity="0.6"/>
+  <!-- chat bubbles -->
+  <rect x="90" y="140" width="420" height="90" rx="26" fill="#4A3419" opacity="0.9"/>
+  <rect x="390" y="260" width="420" height="70" rx="26" fill="#F0C869" opacity="0.9"/>
+  <rect x="90" y="360" width="480" height="110" rx="26" fill="#4A3419" opacity="0.9"/>
+  <rect x="340" y="500" width="470" height="70" rx="26" fill="#F0C869" opacity="0.9"/>
+  <g opacity="0.55" font-family="Georgia, serif" fill="#F6E6BF">
+    <text x="450" y="1340" text-anchor="middle" font-size="26" letter-spacing="3">SCREENSHOT PLACEHOLDER</text>
+    <text x="450" y="1375" text-anchor="middle" font-size="18" letter-spacing="4">CONVERSATION-01</text>
+  </g>
+</svg>
