@@ -28,11 +28,11 @@
       </div>
       <div class="birthday-envelope__letter" id="birthdayLetter">
         <div class="birthday-envelope__letter-inner">
-          <p class="birthday-envelope__greeting">Happy Birthday,</p>
+          <p class="birthday-envelope__greeting">Happy 26th Birthday,</p>
           <p class="birthday-envelope__greeting-name">Love ♡</p>
-          <p class="birthday-envelope__message">A story, for you.</p>
+          <p class="birthday-envelope__message">From SMS</p>
           <button class="birthday-envelope__cta" id="birthdayCta">
-            Begin Our Story <span aria-hidden="true">→</span>
+            Begin Your Story <span aria-hidden="true">→</span>
           </button>
         </div>
       </div>
@@ -208,7 +208,88 @@
   </div>
 </section>
 
-<!-- ================= FINAL MESSAGE (Chapter Seven) ================= -->
+<!-- ================= CHAPTER 7 — HER WISHES ================= -->
+<section class="section section--cream chapter-reveal" id="her-wishes">
+  <div class="wrap">
+    <div class="section__head reveal-stagger" data-delay="0">
+      <p class="eyebrow chapter-reveal__eyebrow" id="wishesEyebrow">Chapter Seven</p>
+      <h2 class="section__heading chapter-reveal__title" id="wishesHeading">Night Changes</h2>
+      <p class="section__intro chapter-reveal__intro" id="wishesIntro">Watching you chase your dreams is my favorite view. Make a wish love, you deserve all these things coming your way.</p>
+      <div class="music-slot chapter-reveal__music" id="musicSlot-wishes"></div>
+    </div>
+  </div>
+
+  <!-- Cupcake + Wish Experience -->
+  <div class="wish-container" id="wishContainer">
+    <!-- Cupcake Stage -->
+    <div class="cupcake-stage" id="cupcakeStage">
+      <div class="cupcake-wrapper" id="cupcakeWrapper">
+        <div class="cupcake-glow" id="cupcakeGlow"></div>
+        <div class="cupcake-image-wrap" id="cupcakeImageWrap">
+          <img src="assets/images/make-a-wish-cupcake.jpg" alt="A magical birthday cupcake" class="cupcake-image" id="cupcakeImage" />
+          <div class="cupcake-sparkles" id="cupcakeSparkles" aria-hidden="true">
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+            <span class="sparkle-dot"></span>
+          </div>
+        </div>
+        <div class="cupcake-text" id="cupcakeText">MAKE A WISH</div>
+        <div class="cupcake-click-hint" id="cupcakeHint">tap the cupcake ✦</div>
+      </div>
+    </div>
+
+    <!-- Envelopes Grid -->
+    <div class="envelopes-grid" id="envelopesGrid" aria-hidden="true">
+      <button class="envelope-card" data-wish="psychologist" aria-label="Open wish: Psychologist dream">
+        <div class="envelope-card__inner">
+          <div class="envelope-card__flap"></div>
+          <div class="envelope-card__seal">♡</div>
+          <div class="envelope-card__label">Wish 1</div>
+        </div>
+      </button>
+      <button class="envelope-card" data-wish="family" aria-label="Open wish: Family dream">
+        <div class="envelope-card__inner">
+          <div class="envelope-card__flap"></div>
+          <div class="envelope-card__seal">♡</div>
+          <div class="envelope-card__label">Wish 2</div>
+        </div>
+      </button>
+      <button class="envelope-card" data-wish="greece" aria-label="Open wish: Greece dream">
+        <div class="envelope-card__inner">
+          <div class="envelope-card__flap"></div>
+          <div class="envelope-card__seal">♡</div>
+          <div class="envelope-card__label">Wish 3</div>
+        </div>
+      </button>
+      <button class="envelope-card" data-wish="birkin" aria-label="Open wish: Birkin dream">
+        <div class="envelope-card__inner">
+          <div class="envelope-card__flap"></div>
+          <div class="envelope-card__seal">♡</div>
+          <div class="envelope-card__label">Wish 4</div>
+        </div>
+      </button>
+    </div>
+
+    <!-- Wish Reveal Modal -->
+    <div class="wish-modal" id="wishModal" aria-hidden="true">
+      <div class="wish-modal__backdrop" id="wishModalBackdrop"></div>
+      <div class="wish-modal__card" role="dialog" aria-modal="true">
+        <button class="wish-modal__close" id="wishModalClose" type="button" aria-label="Close wish">×</button>
+        <div class="wish-modal__image-wrap">
+          <img class="wish-modal__image" id="wishModalImage" src="" alt="" />
+        </div>
+        <p class="wish-modal__caption" id="wishModalCaption"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL MESSAGE ================= -->
 <section class="finale finale-reveal" id="finale">
   <img class="finale__image" id="finaleImage" src="" alt="" />
   <div class="finale__scrim"></div>

@@ -365,6 +365,7 @@
     { slot: "musicSlot-memories",      music: C.firstMemories.music },
     { slot: "musicSlot-little",        music: C.littleThings.music },
     { slot: "musicSlot-journey",       music: C.journey.music },
+    { slot: "musicSlot-wishes", music: C.finalMessage.music || null }
   ];
 
   let currentAudio = null;
@@ -770,4 +771,127 @@
       if (e.key === "Escape") closeModal();
     });
   })();
+
+ /* ============================================================
+     CHAPTER 7 — HER WISHES
+     ============================================================ */
+  (function initWishes() {
+    const wrapper = $("cupcakeWrapper");
+    const text = $("cupcakeText");
+    const hint = $("cupcakeHint");
+    const envelopesGrid = $("envelopesGrid");
+    const modal = $("wishModal");
+    const modalBackdrop = $("wishModalBackdrop");
+    const modalClose = $("wishModalClose");
+    const modalImage = $("wishModalImage");
+    const modalCaption = $("wishModalCaption");
+    const envelopeCards = document.querySelectorAll(".envelope-card");
+    const section = document.getElementById("her-wishes");
+
+    if (!wrapper) return;
+
+    const wishData = {
+      psychologist: {
+        image: "assets/images/wish-psychologist.jpg",
+        caption: "One day, a clinic of her own. A place where her knowledge, compassion, and heart can help people find their way.",
+      },
+      family: {
+        image: "assets/images/wish-family.jpg",
+        caption: "One day, a home filled with the kind of love that keeps growing. The two of us, and the little family we build together.",
+      },
+      greece: {
+        image: "assets/images/wish-greece.jpg",
+        caption: "One day, somewhere under the Greek sun. White walls, blue seas, and a dream finally becoming a memory.",
+      },
+      birkin: {
+        image: "assets/images/wish-birkin.jpg",
+        caption: "Because some dreams come in beautiful boxes, too.",
+      },
+    };
+
+    let hasWished = false;
+
+    // Cupcake click handler — cupcake stays visible!
+    wrapper.addEventListener("click", function(e) {
+      if (this.classList.contains("is-popping") || this.classList.contains("is-fading")) return;
+      if (hasWished) return;
+
+      // Pop animation
+      this.classList.add("is-popping");
+
+      // After pop, shrink cupcake (stays visible!) and show envelopes
+      setTimeout(() => {
+        this.classList.remove("is-popping");
+        this.classList.add("is-fading");
+      }, 700);
+
+      setTimeout(() => {
+        envelopesGrid.classList.add("is-visible");
+        envelopesGrid.setAttribute("aria-hidden", "false");
+        hasWished = true;
+        
+        // Scroll slightly to show the envelopes
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const offset = window.scrollY + rect.top - 80;
+          window.scrollTo({ top: offset, behavior: "smooth" });
+        }
+      }, 1300);
+    });
+
+    // Envelope click handler
+    envelopeCards.forEach((card) => {
+      card.addEventListener("click", function() {
+        const wishKey = this.dataset.wish;
+        const wish = wishData[wishKey];
+        if (!wish) return;
+
+        // Open envelope animation
+        this.classList.add("is-open");
+
+        // Show modal after flap animation
+        setTimeout(() => {
+          modalImage.src = wish.image;
+          modalImage.alt = wishKey;
+          modalCaption.textContent = wish.caption;
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+        }, 350);
+
+        // Reset envelope after closing
+        const onClose = () => {
+          this.classList.remove("is-open");
+          modal.removeEventListener("close", onClose);
+        };
+        modal.addEventListener("close", onClose);
+      });
+    });
+
+    // Modal close handlers
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      // Reset all envelopes
+      envelopeCards.forEach((card) => {
+        card.classList.remove("is-open");
+      });
+    }
+
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    // Reduced motion check
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (prefersReducedMotion.matches) {
+      wrapper.style.animation = "none";
+      document.querySelectorAll(".sparkle-dot").forEach((dot) => {
+        dot.style.animation = "none";
+        dot.style.opacity = "0.15";
+      });
+    }
+  })();
+
 })();

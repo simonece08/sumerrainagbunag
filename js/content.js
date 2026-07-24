@@ -8,7 +8,7 @@ const SITE_CONTENT = {
   // META — browser tab title
   // ----------------------------------------------------------
   meta: {
-    pageTitle: "Happy Birthday, My Love",
+    pageTitle: "Happy 26 Birthday, My Love",
     herName: "Her Name",
   },
 
@@ -19,9 +19,9 @@ const SITE_CONTENT = {
     image: "assets/images/hero.jpg",
     imageAlt: "A portrait photo of her",
     eyebrow: "A story, for you",
-    title: "My Love, \nSumer",
-    subtitle: "Once upon a time, there was a girl.\n\nAnd then, somehow, our stories became one.",
-    cta: "Begin Our Story",
+    title: "My Love, \nMy Sumer",
+    subtitle: "This isn't just another story; it is the story of a girl destined to love deeply and be deeply loved.",
+    cta: "Begin your story",
   },
 
   // ----------------------------------------------------------
@@ -29,7 +29,7 @@ const SITE_CONTENT = {
   // ----------------------------------------------------------
   beforeWeMet: {
     eyebrow: "Chapter One",
-    heading: "Night Changes",
+    heading: "Matilda",
     intro: "Time has a quiet way of moving when you aren't looking. The magic you bring to the world, remains the same.",
     music: {
       src: "assets/audio/chapter-1.mp3",
@@ -88,7 +88,7 @@ const SITE_CONTENT = {
   conversations: {
     eyebrow: "Chapter Two",
     heading: "Late Night Talking",
-    intro: "Where it all began. Just a small, quiet message in time unknowingly planting the seeds for the grandest love story of my life. I hope I can make you remember the moment.",
+    intro: "Where it all began. I hope I can make you remember the moment i received the best reply I've ever gotten. Just a simple DM, a little bit of nervousness, and no idea that this exact conversation was about to change everything.",
     music: {
       src: "assets/audio/chapter-2.mp3",
       playLabel: "Play the soundtrack",
@@ -97,7 +97,7 @@ const SITE_CONTENT = {
     chat: {
       contactName: "cr0issum",
       date: "July 3, 2025",
-      continueLabel: "Continue our story →",
+      continueLabel: "Will you Date him? →",
       messages: [
         { sender: "me", text: "Hiii 😆" },
         { sender: "her", text: "good morning 😆" },
@@ -121,8 +121,8 @@ const SITE_CONTENT = {
     heading: "And Then, Everything Changed",
     date: "Month Day, Year",
     location: "Where it happened",
-    title: "Golden",
-    caption: "I didn't know it yet, but that was the last ordinary day I'd ever have. Every day since has had you in it.",
+    title: "Irresistible",
+    caption: "Looking back, that was the last ordinary day of my life and the start of everything good. After everything you’d been through, saying yes to me took so much bravery, and I never take that for granted.",
     image: "assets/images/meeting-day.jpg",
     imageAlt: "A photo from the day we met",
     music: {
@@ -131,8 +131,8 @@ const SITE_CONTENT = {
       pauseLabel: "Pause the soundtrack",
     },
     liveClock: {
-      startISO: "2026-02-22T16:30:00+08:00",
-      heading: "We've been part of each other's story for…",
+      startISO: "2026-02-22T16:41:00+08:00",
+      heading: "Our answered prayers…",
       subtitle: "Every second since the moment our story began.",
       units: { days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds" },
     },
@@ -343,8 +343,15 @@ const SITE_CONTENT = {
     image: "assets/images/final-photo.jpg",
     imageAlt: "A meaningful photo of us",
     eyebrow: "To be continued…",
-    heading: "Happy Birthday, My Love",
+    heading: "Happy Birthday Mahal",
     message: "Of every story you've ever lived, I'm endlessly grateful mine gets to be a part of yours. Here's to the girl you were, the woman you are, and every chapter we haven't written yet. I love you more today than yesterday — and that's saying a lot.",
     signature: "Yours, always",
+    // Chapter 7's own soundtrack. Replace the src below with your own
+    // audio file (mp3) — same pattern as every other chapter's music.
+    music: {
+      src: "assets/audio/chapter-7.mp3",
+      playLabel: "Play the soundtrack",
+      pauseLabel: "Pause the soundtrack",
+    },
   },
 };
