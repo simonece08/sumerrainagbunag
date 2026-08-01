@@ -289,6 +289,48 @@
   </div>
 </section>
 
+<!-- ================= CHAPTER 8 — THE MOVIE OF US ================= -->
+<section class="section section--cream chapter-reveal" id="movie-of-us">
+  <div class="wrap">
+    <div class="section__head reveal-stagger" data-delay="0">
+      <p class="eyebrow chapter-reveal__eyebrow" id="movieEyebrow"></p>
+      <h2 class="section__heading chapter-reveal__title" id="movieHeading"></h2>
+      <p class="section__intro chapter-reveal__intro" id="movieIntro"></p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="movie-frame-wrap chapter-reveal__video-frame" id="movieFrameWrap">
+      <p class="movie-label" id="movieLabel"></p>
+      <div class="movie-frame" id="movieFrame">
+        <div class="movie-frame__glow" aria-hidden="true"></div>
+        <div class="movie-frame__inner">
+          <video
+            id="chapter8Video"
+            class="movie-frame__video"
+            src="assets/videos/our-story.mp4"
+            preload="metadata"
+            playsinline
+            muted
+          ></video>
+          <button class="movie-sound-toggle" id="movieSoundToggle" type="button" aria-label="Turn on sound">
+            <span class="movie-sound-toggle__icon movie-sound-toggle__icon--off" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 010 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M18.5 6a8 8 0 010 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/></svg>
+            </span>
+            <span class="movie-sound-toggle__label" id="movieSoundLabel"></span>
+          </button>
+        </div>
+      </div>
+      <p class="movie-end-message" id="movieEndMessage" aria-live="polite"></p>
+      <button class="movie-replay-btn" id="movieReplayBtn" type="button">
+        <span id="movieReplayLabel"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="chapter-divider" aria-hidden="true"><span></span></div>
+</section>
+
 <!-- ================= FINAL MESSAGE ================= -->
 <section class="finale finale-reveal" id="finale">
   <img class="finale__image" id="finaleImage" src="" alt="" />

@@ -894,4 +894,133 @@
     }
   })();
 
+  /* ============================================================
+     CHAPTER 8 — THE MOVIE OF US
+     ============================================================ */
+  (function initMovieOfUs() {
+    const data = C.movieOfUs;
+    if (!data) return;
+
+    setText("movieEyebrow", data.eyebrow);
+    setText("movieHeading", data.heading);
+    setText("movieIntro", data.intro);
+    setText("movieLabel", data.label);
+    setText("movieReplayLabel", data.replayLabel || "Watch again");
+
+    const section = $("movie-of-us");
+    const video = $("chapter8Video");
+    const frame = $("movieFrame");
+    const soundToggle = $("movieSoundToggle");
+    const soundLabel = $("movieSoundLabel");
+    const endMessage = $("movieEndMessage");
+    const replayBtn = $("movieReplayBtn");
+
+    if (!video || !frame || !section) return;
+
+    if (data.video) video.src = data.video;
+
+    // Muted at start — required for autoplay to be allowed by the browser.
+    video.muted = true;
+    video.setAttribute("muted", "");
+
+    let hasUnmuted = false;
+    let muteAutoplayFailed = false;
+
+    function setToggleForMuted() {
+      if (soundLabel) soundLabel.textContent = data.muteLabel || "Tap for sound";
+      if (soundToggle) soundToggle.setAttribute("aria-label", data.muteAria || "Turn on sound");
+      if (soundToggle) soundToggle.classList.remove("is-hidden");
+    }
+
+    function setToggleForPlayPrompt() {
+      // Even muted autoplay was blocked (rare) — ask for a tap to start.
+      if (soundLabel) soundLabel.textContent = data.playLabel || "Tap to play";
+      if (soundToggle) soundToggle.setAttribute("aria-label", data.playAria || "Play our story video");
+      if (soundToggle) soundToggle.classList.remove("is-hidden");
+    }
+
+    setToggleForMuted();
+
+    function unmute() {
+      hasUnmuted = true;
+      video.muted = false;
+      video.removeAttribute("muted");
+      video.setAttribute("controls", "");
+      if (soundToggle) soundToggle.classList.add("is-hidden");
+      if (video.paused) {
+        const p = video.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      }
+    }
+
+    if (soundToggle) {
+      soundToggle.addEventListener("click", () => {
+        if (!hasUnmuted) {
+          unmute();
+        } else if (video.paused) {
+          const p = video.play();
+          if (p && typeof p.catch === "function") p.catch(() => {});
+        }
+      });
+    }
+
+    video.addEventListener("click", () => {
+      if (!hasUnmuted) unmute();
+    });
+
+    video.addEventListener("loadedmetadata", () => {
+      if (video.videoHeight > video.videoWidth) {
+        frame.classList.add("is-vertical");
+      } else {
+        frame.classList.add("is-horizontal");
+      }
+    });
+
+    video.addEventListener("play", () => {
+      frame.classList.add("is-playing");
+      if (replayBtn) replayBtn.classList.remove("is-visible");
+      if (endMessage) endMessage.textContent = "";
+    });
+
+    video.addEventListener("ended", () => {
+      if (endMessage) endMessage.textContent = data.endMessage || "";
+      if (replayBtn) replayBtn.classList.add("is-visible");
+    });
+
+    if (replayBtn) {
+      replayBtn.addEventListener("click", () => {
+        video.currentTime = 0;
+        const p = video.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      });
+    }
+
+    // Scroll-triggered muted autoplay: start when the chapter is well
+    // into view, pause when it scrolls out. Browsers block autoplay
+    // with sound entirely, so this plays muted with a tap-for-sound
+    // pill — the same pattern used by Instagram/TikTok feeds.
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (video.ended) return;
+            const p = video.play();
+            if (p && typeof p.catch === "function") {
+              p.catch(() => {
+                muteAutoplayFailed = true;
+                setToggleForPlayPrompt();
+              });
+            }
+          } else if (!video.paused) {
+            video.pause();
+          }
+        });
+      },
+      { threshold: prefersReducedMotion ? 0.01 : 0.5 }
+    );
+    io.observe(section);
+  })();
+
 })();

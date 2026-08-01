@@ -8,7 +8,7 @@ const SITE_CONTENT = {
   // META — browser tab title
   // ----------------------------------------------------------
   meta: {
-    pageTitle: "Happy 26 Birthday, My Love",
+    pageTitle: "Happy 25 Birthday, My Love",
     herName: "Her Name",
   },
 
@@ -18,7 +18,7 @@ const SITE_CONTENT = {
   hero: {
     image: "assets/images/hero.jpg",
     imageAlt: "A portrait photo of her",
-    eyebrow: "A story, for you",
+    eyebrow: "A story, for you mahal",
     title: "My Love, \nMy Sumer",
     subtitle: "This isn't just another story; it is the story of a girl destined to love deeply and be deeply loved.",
     cta: "Begin your story",
@@ -315,29 +315,46 @@ const SITE_CONTENT = {
       {
         image: "assets/images/journey-01.jpg",
         imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Our First Trip",
+        date: "April",
+        title: "Yellow Daisies",
         caption: "Somewhere new, together for the first time — and it already felt like home.",
       },
       {
         image: "assets/images/journey-02.jpg",
         imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Through the Hard Days",
+        date: "May",
+        title: "Our First Trip",
         caption: "We learned that we're better at facing life together than apart.",
       },
       {
         image: "assets/images/journey-03.jpg",
         imageAlt: "A milestone in our journey",
-        date: "Year",
-        title: "Right Now",
+        date: "June",
+        title: "Photobooth",
         caption: "Still choosing you. Still grateful. Still writing this story with you.",
       },
     ],
   },
 
   // ----------------------------------------------------------
-  // 8. FINAL BIRTHDAY MESSAGE
+  // 8. THE MOVIE OF US — Chapter Eight (CapCut video)
+  // ----------------------------------------------------------
+  movieOfUs: {
+    eyebrow: "Chapter Eight",
+    heading: "The Movie of Us",
+    intro: "Some memories are held in photographs. Others deserve to move, breathe, and be remembered all over again.",
+    label: "A Little Film For You",
+    video: "assets/videos/our-story.mp4",
+    playLabel: "Tap to play",
+    playAria: "Play our story video",
+    muteLabel: "Tap for sound",
+    muteAria: "Turn on sound",
+    endMessage: "And somehow, every little moment led us here. ♡",
+    replayLabel: "Watch again",
+  },
+
+  // ----------------------------------------------------------
+  // 9. FINAL BIRTHDAY MESSAGE
   // ----------------------------------------------------------
   finalMessage: {
     image: "assets/images/final-photo.jpg",

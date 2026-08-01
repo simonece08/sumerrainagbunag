@@ -2887,6 +2887,218 @@ section { position: relative; }
 }
 
 /* ============================================================
+   CHAPTER 8 — THE MOVIE OF US
+   ============================================================ */
+#movie-of-us .section__head {
+  max-width: 640px;
+  margin-bottom: clamp(30px, 4vw, 46px);
+}
+
+.chapter-reveal__video-frame {
+  opacity: 0;
+  transform: translateY(35px) scale(0.97);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+
+.chapter-reveal.is-visible .chapter-reveal__video-frame {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.55s;
+}
+
+.movie-frame-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.movie-label {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin: 0 0 20px;
+}
+
+.movie-frame {
+  position: relative;
+  border-radius: 22px;
+  padding: 10px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--ivory) 100%);
+  border: 1px solid rgba(201, 147, 47, 0.35);
+  box-shadow: 0 30px 60px -28px rgba(59, 42, 24, 0.35);
+}
+
+.movie-frame__glow {
+  position: absolute;
+  inset: -36px;
+  border-radius: 32px;
+  background: radial-gradient(60% 60% at 50% 45%, rgba(246, 217, 138, 0.28) 0%, rgba(246, 217, 138, 0) 72%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.movie-frame__inner {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--brown);
+  aspect-ratio: 16 / 9;
+}
+
+.movie-frame.is-vertical .movie-frame__inner {
+  aspect-ratio: 9 / 16;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.movie-frame__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--brown);
+}
+
+.movie-sound-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px 9px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 217, 138, 0.55);
+  background: rgba(59, 42, 24, 0.55);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  animation: movie-toggle-breathe 2.6s var(--ease-in-out) infinite;
+  transition: opacity 0.5s var(--ease-out), transform 0.3s var(--ease-out);
+  z-index: 2;
+}
+
+.movie-sound-toggle:hover,
+.movie-sound-toggle:focus-visible {
+  transform: scale(1.05);
+}
+
+.movie-sound-toggle:focus-visible {
+  outline: 2px solid var(--butter);
+  outline-offset: 4px;
+}
+
+.movie-sound-toggle.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes movie-toggle-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(246, 217, 138, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(246, 217, 138, 0); }
+}
+
+.movie-sound-toggle__icon {
+  width: 17px;
+  height: 17px;
+  color: var(--ivory);
+  flex-shrink: 0;
+}
+
+.movie-sound-toggle__label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.movie-end-message {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--brown-soft);
+  margin: 26px 0 0;
+  min-height: 1em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.movie-end-message:not(:empty) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.movie-replay-btn {
+  display: block;
+  margin: 18px auto 0;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 147, 47, 0.5);
+  background: transparent;
+  color: var(--gold-deep);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-out), background 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.movie-replay-btn.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.movie-replay-btn:hover {
+  background: var(--gold);
+  color: var(--ivory);
+}
+
+.movie-replay-btn:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+
+.chapter-divider {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(56px, 8vw, 96px);
+}
+
+.chapter-divider span {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 147, 47, 0) 0%, rgba(201, 147, 47, 0.6) 50%, rgba(201, 147, 47, 0) 100%);
+}
+
+@media (max-width: 760px) {
+  .movie-frame {
+    border-radius: 16px;
+    padding: 6px;
+  }
+  .movie-frame__inner {
+    border-radius: 10px;
+  }
+  .movie-sound-toggle {
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 14px 8px 10px;
+  }
+  .movie-frame.is-vertical .movie-frame__inner {
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
    REDUCED MOTION (global)
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
@@ -2898,7 +3110,15 @@ section { position: relative; }
   .chapter-reveal__title,
   .chapter-reveal__intro,
   .chapter-reveal__music,
-  .chapter-reveal__phone {
+  .chapter-reveal__phone,
+  .chapter-reveal__video-frame {
+    opacity: 1;
+    transform: none;
+  }
+  .movie-sound-toggle {
+    animation: none;
+  }
+  .movie-end-message {
     opacity: 1;
     transform: none;
   }
