@@ -330,7 +330,7 @@ littleThings: {
         imageAlt: "A milestone in our journey",
         date: "June",
         title: "Photobooth",
-        caption: "I love looking at this picture because they remind me of how far we've already come even after just 6 months. We were still figuring each other out, still making memories, and still learning how to love each other better. I'm sorry for being a sakit ng ulo sa mahal ko",
+        caption: "I love looking at this picture because they remind me of how far we've already come even after just 6 months. We were still figuring each other out, still making memories, and still learning how to understand and love each other better. I'm sorry for being a sakit ng ulo sa mahal ko.",
       },
     ],
   },
