@@ -341,7 +341,7 @@ littleThings: {
   movieOfUs: {
     eyebrow: "Chapter Eight",
     heading: "Sweet Creature",
-    intro: "For my sweet creature, Sumer.",
+    intro: "For my sweet creature, the girl I could look a thousand times over and still want to look at you a thousand more. I love your smile, your little things, and everything that make you who you are. There is so much about you that I adore and I hope I get to spend a lifetime discovering everything little by little. But you never have to prove anything to me or become anything more than who you are. All that you are is already enough for me. You'll always be my sweet creature, mahal. ",
     label: "A Little Film For You",
     video: "assets/videos/our-story.mp4",
     playLabel: "Tap to play",
@@ -359,7 +359,7 @@ littleThings: {
     image: "assets/images/final-photo.jpg",
     imageAlt: "A meaningful photo of us",
     eyebrow: "End",
-    heading: "Happy Birthday Mahal",
+    heading: "Happy Birthday Love",
 message: "Dear Sumer, I don't think I ever expected someone to become this important to me. Somewhere between our first conversations, our happiest moments, our misunderstandings,  and everything in between, you became someone I couldn't imagine my life without. I love the way you make me laugh, you appreciate things, your dedication in your craft, the way you have so much friends, the way you love your family, and the way you bring joy, and joy just goes naturally with you. You're a sunshine mahal and I love how genuine your joy is. I love watching you chase the things you care about, and I love being there for the dreams you haven't reached yet. I know your parents aren't there for you right now, even during your review, and I see how much that hurts but I want you to know I'm here mahal, I see you and I'm not going anywhere. Of every story you've ever lived, I'm endlessly blessed mine gets to be a part of yours. I know we won't always have perfect days, we've already had moments that are testing our relationship but those moments taught me something too. I love you so much",
     signature: "Yours, always in all ways",
     // Chapter 7's own soundtrack. Replace the src below with your own
