@@ -793,19 +793,19 @@
     const wishData = {
       psychologist: {
         image: "assets/images/wish-psychologist.jpg",
-        caption: "One day, a clinic of her own. A place where her knowledge, compassion, and heart can help people find their way.",
+        caption: "Your own clinic with a pastry shop inside. A place where you can help people, do what you love, and make everyone feel at home, one brain and one bread at a time.",
       },
       family: {
         image: "assets/images/wish-family.jpg",
-        caption: "One day, a home filled with the kind of love that keeps growing. The two of us, and the little family we build together.",
+        caption: "Your little boy or my little girl. Maybe we'll get blessed enough to have both. 😆",
       },
       greece: {
         image: "assets/images/wish-greece.jpg",
-        caption: "One day, somewhere under the Greek sun. White walls, blue seas, and a dream finally becoming a memory.",
+        caption: "Your dream destination, Santorini. Somewhere under the Greek sun we'll enjoy each other's company. ",
       },
       birkin: {
         image: "assets/images/wish-birkin.jpg",
-        caption: "Because some dreams come in beautiful boxes, too.",
+        caption: "Some dreams come in beautiful boxes too.",
       },
     };
 

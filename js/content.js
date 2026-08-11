@@ -8,7 +8,7 @@ const SITE_CONTENT = {
   // META — browser tab title
   // ----------------------------------------------------------
   meta: {
-    pageTitle: "Happy 25 Birthday, My Love",
+    pageTitle: "Happy 25 Birthday, My Love SRA",
     herName: "Her Name",
   },
 
@@ -18,10 +18,10 @@ const SITE_CONTENT = {
   hero: {
     image: "assets/images/hero.jpg",
     imageAlt: "A portrait photo of her",
-    eyebrow: "A story, for you mahal",
+    eyebrow: "A story for you mahal",
     title: "My Love, \nMy Sumer",
     subtitle: "This isn't just another story; it is the story of a girl destined to love deeply and be deeply loved.",
-    cta: "Begin your story",
+    cta: "START",
   },
 
   // ----------------------------------------------------------
@@ -30,7 +30,7 @@ const SITE_CONTENT = {
   beforeWeMet: {
     eyebrow: "Chapter One",
     heading: "Matilda",
-    intro: "Time has a quiet way of moving when you aren't looking. The magic you bring to the world, remains the same.",
+    intro: "Before I knew you, there was a little girl with dreams and laughter. A whole life waiting ahead of her. How I wish I could have known you back then.",
     music: {
       src: "assets/audio/chapter-1.mp3",
       playLabel: "Play the soundtrack",
@@ -42,21 +42,21 @@ const SITE_CONTENT = {
         imageAlt: "A photo from before we met",
         date: "Somewhere, back then",
         title: "Pure Joy, From the Start",
-        caption: "Before I knew you, you are always the girl with same eyes as now. You're a human sunshine.",
+        caption: "You're a living prayer mahal, thank you for tito Glen and Tita Rizza for bringing you into this world",
       },
       {
         image: "assets/images/before-we-met-02.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "Collecting Her Victories",
-        caption: "You were out there collecting stories and achievement, long before you had any idea I'd want to hear every one of them now.",
+        caption: "Before I knew you, you are always the girl with same joy as now. Never stop sharing your smile to everyone around you.",
       },
       {
         image: "assets/images/before-we-met-03.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "Stepping Into Her Own",
-        caption: "Ordinary days that, looking back, were quietly shaping the woman I'd fall for.",
+        caption: "Days that, looking back, were quietly shaping the woman I'd fall for. I'll always be here to support you every step of your way, through your highs and especially with your lows",
       },
       {
         image: "assets/images/before-we-met-04.jpg",
@@ -70,14 +70,14 @@ const SITE_CONTENT = {
         imageAlt: "A photo from before we met",
         date: "",
         title: "Rooted in Love",
-        caption: "The family, friends, relationships and moments that raised the woman I'd eventually meet.",
+        caption: "The family, friends, relationships and moments that raised the bravest woman I'll ever meet",
       },
       {
         image: "assets/images/before-we-met-06.jpg",
         imageAlt: "A photo from before we met",
         date: "",
         title: "The Girl I Fell for",
-        caption: "Every version of you before me was already worth loving. You're always a glimmer of joy to everyone around you.",
+        caption: "Every version of you before me was already worth loving and may nooone else tell you otherwise. You're always a glimmer of joy to everyone around you and a hope for me, your SMS.",
       },
     ],
   },
@@ -119,8 +119,8 @@ const SITE_CONTENT = {
   dayWeMet: {
     eyebrow: "Chapter Three",
     heading: "And Then, Everything Changed",
-    date: "Month Day, Year",
-    location: "Where it happened",
+    date: "Feb. 22, 2026",
+    location: "Gondola Coffee",
     title: "Irresistible",
     caption: "Looking back, that was the last ordinary day of my life and the start of everything good. After everything you’d been through, saying yes to me took so much bravery, and I never take that for granted.",
     image: "assets/images/meeting-day.jpg",
@@ -138,174 +138,173 @@ const SITE_CONTENT = {
     },
   },
 
-  // ----------------------------------------------------------
-  // 5. OUR FIRST MEMORIES
-  // ----------------------------------------------------------
-  firstMemories: {
-    eyebrow: "Chapter Four",
-    heading: "Adore You",
-    intro: "The early days — nervous laughter, long conversations, and the slow, wonderful realization that I never wanted them to end.",
-    music: {
-      src: "assets/audio/chapter-4.mp3",
-      playLabel: "Play the soundtrack",
-      pauseLabel: "Pause the soundtrack",
-    },
-    photos: [
-      {
-        image: "assets/images/first-memory-01.jpg",
-        imageAlt: "An early memory together",
-        date: "Early on",
-        title: "First Real Conversation",
-        caption: "We talked for hours and it still felt too short.",
-        layout: "polaroid",
-      },
-      {
-        image: "assets/images/first-memory-02.jpg",
-        imageAlt: "An early memory together",
-        date: "Soon after",
-        title: "That First Date",
-        caption: "I was nervous. You made it easy.",
-        layout: "editorial",
-      },
-      {
-        image: "assets/images/first-memory-03.jpg",
-        imageAlt: "An early memory together",
-        date: "A few weeks in",
-        title: "The Day I Knew",
-        caption: "Somewhere in an ordinary afternoon, I quietly realized this was different.",
-        layout: "polaroid",
-      },
-      {
-        image: "assets/images/first-memory-04.jpg",
-        imageAlt: "An early memory together",
-        date: "",
-        title: "Us, Learning Each Other",
-        caption: "Every small thing I learned about you became a favorite thing.",
-        layout: "editorial",
-      },
-      {
-        image: "assets/images/first-memory-05.jpg",
-        imageAlt: "An early memory together",
-        date: "",
-        title: "The First 'I Miss You'",
-        caption: "I hadn't even left yet and I already missed you.",
-        layout: "polaroid",
-      },
-      {
-        image: "assets/images/first-memory-06.jpg",
-        imageAlt: "An early memory together",
-        date: "",
-        title: "Meeting Each Other's World",
-        caption: "You started showing up in the parts of my life that mattered most.",
-        layout: "editorial",
-      },
-    ],
+// ----------------------------------------------------------
+// 5. OUR FIRST MEMORIES
+// ----------------------------------------------------------
+firstMemories: {
+  eyebrow: "Chapter Four",
+  heading: "Adore You",
+  intro: "The early days, nervous laughter, long conversations, and popcorn kisses. Lovely moments that slowly shaped our relationship.",
+  music: {
+    src: "assets/audio/chapter-4.mp3",
+    playLabel: "Play the soundtrack",
+    pauseLabel: "Pause the soundtrack",
   },
+  photos: [
+    {
+      image: "assets/images/first-memory-01.jpg",
+      imageAlt: "An early memory together",
+      date: "March 10",
+      title: "First Kiss",
+      caption: "After our first date, I already knew I wanted to see you again. Being with you just feels so natural.",
+      layout: "polaroid",
+    },
+    {
+      image: "assets/images/first-memory-02.jpg",
+      imageAlt: "An early memory together",
+      date: "March 15",
+      title: "Us, Learning Each Other",
+      caption: "That day wasn't perfect, but it taught me more about us. We were still learning how to understand each other.",
+      layout: "editorial",
+    },
+    {
+      image: "assets/images/first-memory-03.jpg",
+      imageAlt: "An early memory together",
+      date: "March 28",
+      title: "Wonderwall",
+      caption: "A simple movie night about being far from home, yet somehow, it brought us a little closer.",
+      layout: "polaroid",
+    },
+    {
+      image: "assets/images/first-memory-04.jpg",
+      imageAlt: "An early memory together",
+      date: "April 13",
+      title: "Slow Moments",
+      caption: "Nothing extraordinary happened that day. It was just us, sharing a quiet moment together. Somehow, ordinary moments like these became some of my favorite memories of you. Thank You for waiting!!! :>",
+      layout: "editorial",
+    },
+    {
+      image: "assets/images/first-memory-05.jpg",
+      imageAlt: "An early memory together",
+      date: "March 29",
+      title: "Best Day Yet",
+      caption: "This was the day I became convinced that I really want to marry you.",
+      layout: "polaroid",
+    },
+    {
+      image: "assets/images/first-memory-06.jpg",
+      imageAlt: "An early memory together",
+      date: "May 8",
+      title: "Meeting Each Other's World",
+      caption: "That night, we shared a kind of closeness we had never experienced before. Being vulnerable with each other made what we have feel so much deeper.",
+      layout: "editorial",
+    },
+  ],
+},
 
   // ----------------------------------------------------------
-  // 6. THE LITTLE THINGS
-  // ----------------------------------------------------------
-  littleThings: {
-    eyebrow: "Chapter Five",
-    heading: "Little Things",
-    intro: "Nine little things, hidden away. Tap an icon to reveal the memory behind it.",
-    music: {
-      src: "assets/audio/chapter-5.mp3",
-      playLabel: "Play the soundtrack",
-      pauseLabel: "Pause the soundtrack",
-    },
-    items: [
-      {
-        key: "gift",
-        icon: "🎁",
-        label: "Gift",
-        image: "assets/images/little-thing-01.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "The way you laugh at your own jokes before you finish telling them.",
-      },
-      {
-        key: "bread",
-        icon: "🍞",
-        label: "Bread",
-        image: "assets/images/little-thing-02.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "Lazy Sunday mornings that turned into whole afternoons.",
-      },
-      {
-        key: "lilies",
-        icon: "🌸",
-        label: "Flower",
-        image: "assets/images/little-thing-03.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "That random text that made my entire day better.",
-      },
-      {
-        key: "waffle",
-        icon: "🧇",
-        label: "Waffle",
-        image: "assets/images/little-thing-04.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "Every playlist you've ever made me listen to 'just this one song.'",
-      },
-      {
-        key: "dog",
-        icon: "🐶",
-        label: "Dog",
-        image: "assets/images/little-thing-05.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "The face you make when you're concentrating on something silly.",
-      },
-      {
-        key: "chefHat",
-        icon: "👨‍🍳",
-        label: "Baker",
-        image: "assets/images/little-thing-06.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "Falling asleep mid-conversation because neither of us wanted the day to end.",
-      },
-      {
-        key: "yoga",
-        icon: "🧘",
-        label: "Yoga",
-        image: "assets/images/little-thing-07.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "The way you always steal the last bite off my plate.",
-      },
-      {
-        key: "saturn",
-        icon: "🪐",
-        label: "Interstellar",
-        image: "assets/images/little-thing-08.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "Inside jokes that still make us laugh, every single time.",
-      },
-      {
-        key: "mic",
-        icon: "🎤",
-        label: "Harry",
-        image: "assets/images/little-thing-09.jpg",
-        imageAlt: "A little everyday moment",
-        date: "",
-        caption: "You, half-asleep, still reaching for my hand.",
-      },
-    ],
+// 6. THE LITTLE THINGS
+// ----------------------------------------------------------
+littleThings: {
+  eyebrow: "Chapter Five",
+  heading: "Little Things",
+  intro: "Nine little things that remind me of you. Some are your favorites, and some are the little things about you that I love.",
+  music: {
+    src: "assets/audio/chapter-5.mp3",
+    playLabel: "Play the soundtrack",
+    pauseLabel: "Pause the soundtrack",
   },
-
+  items: [
+    {
+      key: "gift",
+      icon: "🎁",
+      label: "Gift",
+      image: "assets/images/little-thing-01.jpg",
+      imageAlt: "Your thoughtfulness, the way you make me feel remembered and appreciated",
+      date: "",
+      caption: "Your thoughtfulness, the way you make me feel remembered and appreciated.",
+    },
+    {
+      key: "bread",
+      icon: "🧠",
+      label: "Psychologist",
+      image: "assets/images/little-thing-02.jpg",
+      imageAlt: "Your future profession and your ability to read my mind",
+      date: "",
+      caption: "Your future profession, but most of the time, you already know what's on my mind because you can read it before I even say a word.",
+    },
+    {
+      key: "lilies",
+      icon: "🌸",
+      label: "Flowers",
+      image: "assets/images/little-thing-03.jpg",
+      imageAlt: "Your favorite flowers and the beginning of our story",
+      date: "",
+      caption: "Your favorite flowers. I love making you feel appreciated and reminding you of how we started.",
+    },
+    {
+      key: "waffle",
+      icon: "🧇",
+      label: "Chicken & Waffles",
+      image: "assets/images/little-thing-04.jpg",
+      imageAlt: "Our favorite comfort food",
+      date: "",
+      caption: "Your favorite comfort food(and naging OUR na din), chicken and waffles, one of the little things that brings out your happiest smile.",
+    },
+    {
+      key: "dog",
+      icon: "🐶",
+      label: "Blacky",
+      image: "assets/images/little-thing-05.jpg",
+      imageAlt: "Blacky, your little companion who reminds you of home",
+      date: "",
+      caption: "Your little companion, Blacky, who reminds you of home and brings so much love into your life.",
+    },
+    {
+      key: "chefHat",
+      icon: "👨‍🍳",
+      label: "Baker",
+      image: "assets/images/little-thing-06.jpg",
+      imageAlt: "Your love for baking bread and pastries",
+      date: "",
+      caption: "Your love for bread and pastries, and the comfort you find in making them and making everything feel so special.",
+    },
+    {
+      key: "yoga",
+      icon: "🧘",
+      label: "Yoga",
+      image: "assets/images/little-thing-07.jpg",
+      imageAlt: "Yoga, your hobby for clearing your mind",
+      date: "",
+      caption: "Your way of clearing your mind, a hobby that helps you find your peace and makes your days feel a little lighter.",
+    },
+    {
+      key: "saturn",
+      icon: "🪐",
+      label: "Interstellar",
+      image: "assets/images/little-thing-08.jpg",
+      imageAlt: "Your favorite movie and one of the things that defined our early conversations",
+      date: "",
+      caption: "Your favorite movie, the one that became part of our early conversations and one of the first things I loved learning about you.",
+    },
+    {
+      key: "mic",
+      icon: "🎤",
+      label: "Harry Styles",
+      image: "assets/images/little-thing-09.jpg",
+      imageAlt: "Harry Styles, your idol",
+      date: "",
+      caption: "Harry, the GOAT, and the one person who can probably make you smile faster than I can.",
+    },
+  ],
+},
   // ----------------------------------------------------------
   // 7. OUR JOURNEY TOGETHER
   // ----------------------------------------------------------
   journey: {
     eyebrow: "Chapter Six",
     heading: "If I Could Fly",
-    intro: "From then to now — a timeline of the moments that built us.",
+    intro: "From then to now, a timeline of the moments that built us.",
     music: {
       src: "assets/audio/chapter-6.mp3",
       playLabel: "Play the soundtrack",
@@ -317,21 +316,21 @@ const SITE_CONTENT = {
         imageAlt: "A milestone in our journey",
         date: "April",
         title: "Yellow Daisies",
-        caption: "Somewhere new, together for the first time — and it already felt like home.",
+        caption: "I still remember this moment so well. It was one of the first times, mahal, we got to be together and feel each other like this, and somehow everything felt so easy. Looking at you that night, all surrounded by yellow daisies and kisses, I remember thinking how blessed I was that I got to cherish those moments with you.",
       },
       {
         image: "assets/images/journey-02.jpg",
         imageAlt: "A milestone in our journey",
         date: "May",
         title: "Our First Trip",
-        caption: "We learned that we're better at facing life together than apart.",
+        caption: "Our first trip together showed me a different side of us. Apologies first for the wrong taxi drop off and long walk mahal, lol. Over those two days, We got to spend more time together, share the little things, and exist beside each other. I loved waking up knowing you were there and I loved going through every street, and having a full tummy with you. It made me realize that somehow I need to slow down in life and cherish moments like this with my loved ones, especially you.",
       },
       {
         image: "assets/images/journey-03.jpg",
         imageAlt: "A milestone in our journey",
         date: "June",
         title: "Photobooth",
-        caption: "Still choosing you. Still grateful. Still writing this story with you.",
+        caption: "I love looking at this picture because they remind me of how far we've already come even after just 6 months. We were still figuring each other out, still making memories, and still learning how to love each other better. I'm sorry for being a sakit ng ulo sa mahal ko",
       },
     ],
   },
@@ -341,8 +340,8 @@ const SITE_CONTENT = {
   // ----------------------------------------------------------
   movieOfUs: {
     eyebrow: "Chapter Eight",
-    heading: "The Movie of Us",
-    intro: "Some memories are held in photographs. Others deserve to move, breathe, and be remembered all over again.",
+    heading: "Sweet Creature",
+    intro: "For my sweet creature, Sumer.",
     label: "A Little Film For You",
     video: "assets/videos/our-story.mp4",
     playLabel: "Tap to play",
@@ -359,10 +358,10 @@ const SITE_CONTENT = {
   finalMessage: {
     image: "assets/images/final-photo.jpg",
     imageAlt: "A meaningful photo of us",
-    eyebrow: "To be continued…",
+    eyebrow: "End",
     heading: "Happy Birthday Mahal",
-    message: "Of every story you've ever lived, I'm endlessly grateful mine gets to be a part of yours. Here's to the girl you were, the woman you are, and every chapter we haven't written yet. I love you more today than yesterday — and that's saying a lot.",
-    signature: "Yours, always",
+message: "Dear Sumer, I don't think I ever expected someone to become this important to me. Somewhere between our first conversations, our happiest moments, our misunderstandings,  and everything in between, you became someone I couldn't imagine my life without. I love the way you make me laugh, you appreciate things, your dedication in your craft, the way you have so much friends, the way you love your family, and the way you bring joy, and joy just goes naturally with you. You're a sunshine mahal and I love how genuine your joy is. I love watching you chase the things you care about, and I love being there for the dreams you haven't reached yet. I know your parents aren't there for you right now, even during your review, and I see how much that hurts but I want you to know I'm here mahal, I see you and I'm not going anywhere. Of every story you've ever lived, I'm endlessly blessed mine gets to be a part of yours. I know we won't always have perfect days, we've already had moments that are testing our relationship but those moments taught me something too. I love you so much",
+    signature: "Yours, always in all ways",
     // Chapter 7's own soundtrack. Replace the src below with your own
     // audio file (mp3) — same pattern as every other chapter's music.
     music: {

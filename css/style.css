@@ -1469,7 +1469,6 @@ section { position: relative; }
   .icon-tile__glyph { font-size: 26px; }
   .icon-tile__label { font-size: 9.5px; }
 }
-
 /* ============================================================
    FINAL MESSAGE
    ============================================================ */
@@ -1485,7 +1484,8 @@ section { position: relative; }
 .finale__image {
   position: absolute;
   inset: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   opacity: 0.5;
 }
@@ -1493,13 +1493,13 @@ section { position: relative; }
 .finale__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(59,42,24,0.55) 0%, rgba(59,42,24,0.88) 100%);
+  background: linear-gradient(180deg, rgba(59, 42, 24, 0.55) 0%, rgba(59, 42, 24, 0.88) 100%);
 }
 
 .finale__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(55% 45% at 50% 35%, rgba(246,217,138,0.4), rgba(246,217,138,0) 70%);
+  background: radial-gradient(55% 45% at 50% 35%, rgba(246, 217, 138, 0.4), rgba(246, 217, 138, 0) 70%);
   mix-blend-mode: screen;
 }
 
@@ -1507,14 +1507,20 @@ section { position: relative; }
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 720px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 100px clamp(20px, 6vw, 64px);
   color: var(--ivory);
 }
 
-.finale__eyebrow { justify-content: center; color: var(--butter); }
-.finale__eyebrow::before { background: var(--butter); }
+.finale__eyebrow {
+  justify-content: center;
+  color: var(--butter);
+}
+
+.finale__eyebrow::before {
+  background: var(--butter);
+}
 
 .finale__heading {
   font-family: var(--font-display);
@@ -1524,28 +1530,284 @@ section { position: relative; }
   margin: 18px 0 26px;
 }
 
-.finale__message {
-  font-size: clamp(16px, 1.8vw, 19px);
-  line-height: 1.75;
-  color: #F3E6C8;
+/* ─── FINALE REVEAL ─── */
+.finale-reveal {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease-out);
 }
 
-.finale__signature {
-  margin-top: 34px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 20px;
+.finale-reveal.is-visible {
+  opacity: 1;
+}
+
+.finale-reveal__inner {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
+}
+
+.finale-reveal.is-visible .finale-reveal__inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.finale-reveal__eyebrow {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: 0.2s;
+}
+
+.finale-reveal.is-visible .finale-reveal__eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.finale-reveal__heading {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: 0.4s;
+}
+
+.finale-reveal.is-visible .finale-reveal__heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.finale-reveal__music {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: 0.55s;
+}
+
+.finale-reveal.is-visible .finale-reveal__music {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── LETTER — ONE CONTINUOUS FLOW ─── */
+.finale__message-wrapper {
+  overflow: visible;
+}
+
+.finale-reveal__message {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: 0.75s;
+  max-width: 72ch;
+  margin: 0 auto;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.8;
+  color: #F3E6C8;
+  text-align: left;
+}
+
+.finale-reveal.is-visible .finale-reveal__message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── LETTER LINES — INLINE (NO LINE BREAKS) ─── */
+.finale-reveal__message-line {
+  display: inline;
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out);
+  white-space: normal;
+}
+
+/* Staggered fade-in for each line (they appear one by one but stay inline) */
+.finale-reveal__message-line:nth-child(1) { transition-delay: 0.85s; }
+.finale-reveal__message-line:nth-child(2) { transition-delay: 1.05s; }
+.finale-reveal__message-line:nth-child(3) { transition-delay: 1.25s; }
+.finale-reveal__message-line:nth-child(4) { transition-delay: 1.45s; }
+.finale-reveal__message-line:nth-child(5) { transition-delay: 1.65s; }
+.finale-reveal__message-line:nth-child(6) { transition-delay: 1.85s; }
+.finale-reveal__message-line:nth-child(7) { transition-delay: 2.05s; }
+.finale-reveal__message-line:nth-child(8) { transition-delay: 2.25s; }
+.finale-reveal__message-line:nth-child(9) { transition-delay: 2.45s; }
+.finale-reveal__message-line:nth-child(10) { transition-delay: 2.65s; }
+.finale-reveal__message-line:nth-child(11) { transition-delay: 2.85s; }
+.finale-reveal__message-line:nth-child(12) { transition-delay: 3.05s; }
+.finale-reveal__message-line:nth-child(13) { transition-delay: 3.25s; }
+.finale-reveal__message-line:nth-child(14) { transition-delay: 3.45s; }
+.finale-reveal__message-line:nth-child(15) { transition-delay: 3.65s; }
+.finale-reveal__message-line:nth-child(16) { transition-delay: 3.85s; }
+.finale-reveal__message-line:nth-child(17) { transition-delay: 4.05s; }
+.finale-reveal__message-line:nth-child(18) { transition-delay: 4.25s; }
+.finale-reveal__message-line:nth-child(19) { transition-delay: 4.45s; }
+.finale-reveal__message-line:nth-child(20) { transition-delay: 4.65s; }
+.finale-reveal__message-line:nth-child(21) { transition-delay: 4.85s; }
+.finale-reveal__message-line:nth-child(22) { transition-delay: 5.05s; }
+.finale-reveal__message-line:nth-child(23) { transition-delay: 5.25s; }
+.finale-reveal__message-line:nth-child(24) { transition-delay: 5.45s; }
+
+.finale-reveal.is-visible .finale-reveal__message-line {
+  opacity: 1;
+}
+
+/* ─── EMPHASIS LINES (GOLD) ─── */
+.finale-reveal__message-line--emphasis {
+  color: var(--butter);
+  transition: opacity 0.9s var(--ease-out), color 0.9s var(--ease-out);
+}
+
+.finale-reveal.is-visible .finale-reveal__message-line--emphasis {
   color: var(--butter);
 }
 
-.finale__foot {
-  margin-top: 56px;
+.finale-reveal.is-visible .finale-reveal__message-line--emphasis::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 0;
+}
+
+/* ─── SIGNATURE ─── */
+.finale-reveal__signature {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: 4.6s;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--butter);
+  margin-top: 30px;
+  text-align: center;
+}
+
+.finale-reveal.is-visible .finale-reveal__signature {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.finale-reveal__foot {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: 4.8s;
+  margin-top: 40px;
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(243, 230, 200, 0.5);
+  text-align: center;
 }
 
+.finale-reveal.is-visible .finale-reveal__foot {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── AMBIENT GLOW ─── */
+.finale-reveal.is-visible .finale__content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(246, 217, 138, 0.08), transparent 70%);
+  pointer-events: none;
+  animation: ambient-glow 3s var(--ease-out) 2s forwards;
+  opacity: 0;
+}
+
+@keyframes ambient-glow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ─── MUSIC BUTTON (Finale) ─── */
+.finale .music-btn {
+  background: rgba(246, 217, 138, 0.08);
+  border-color: rgba(246, 217, 138, 0.4);
+  color: var(--butter);
+}
+
+.finale .music-btn:hover {
+  background: rgba(246, 217, 138, 0.16);
+  border-color: var(--butter);
+}
+
+.finale .music-btn__bars span {
+  background: var(--butter);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 760px) {
+  .finale__content {
+    padding: 60px clamp(16px, 4vw, 32px);
+  }
+
+  .finale-reveal__message {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .finale-reveal__signature {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  .finale-reveal__foot {
+    font-size: 10px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .finale__content {
+    padding: 40px 14px;
+  }
+
+  .finale-reveal__message {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .finale-reveal__signature {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+/* ─── REDUCED MOTION ─── */
+@media (prefers-reduced-motion: reduce) {
+  .finale-reveal {
+    opacity: 1;
+  }
+
+  .finale-reveal__inner,
+  .finale-reveal__eyebrow,
+  .finale-reveal__heading,
+  .finale-reveal__music,
+  .finale-reveal__message,
+  .finale-reveal__message-line,
+  .finale-reveal__message-line--emphasis,
+  .finale-reveal__signature,
+  .finale-reveal__foot {
+    opacity: 1;
+    transform: none;
+  }
+
+  .finale-reveal__message-line--emphasis::after {
+    animation: none;
+    opacity: 0.3;
+  }
+
+  .finale-reveal.is-visible .finale__content::before {
+    animation: none;
+    opacity: 0.5;
+  }
+}
 /* ============================================================
    FINAL MESSAGE REVEAL
    ============================================================ */
